@@ -3,8 +3,9 @@
 \usepackage{xcolor}
 \usepackage{changepage}
 \usepackage[export]{adjustbox}
+\usepackage{booktabs}
 
-\usetheme[numbering=fraction,progressbar=frametitle]{metropolis}
+\usetheme[numbering=fraction,progressbar=frametitle,sectionpage=none]{metropolis}
 
 
 % Backup
@@ -42,6 +43,15 @@
 \makeatother
 
 
+% Commands
+\newcommand{\bluetext}[1]{%
+  \textcolor{myBlue}{#1}
+}
+\newcommand{\redtext}[1]{%
+  \textcolor{myRed}{#1}
+}
+
+
 % Variables
 \def\pt{\ensuremath{p_\mathrm{T}}}
 
@@ -53,8 +63,8 @@
 \institute[CU, SAS]{\inst{1} Charles University, Czechia \\
                     \inst{2} Slovak Academy of Sciences, Slovakia}
 \date[2020-Dec-03]{\footnotesize UNCE Seminar, Prague \\
-                   December 03, 2020 \\
-                   (Ab urbe condita 2773)}
+                   December 03, 2020} % \\
+                   % (Ab urbe condita 2773)}
 
 
 % ---------------------------------------------------------------------------- %
@@ -76,11 +86,11 @@
 \end{frame}
 
 
-\begin{frame}
-  \frametitle{Overview}
-
-  \tableofcontents
-\end{frame}
+% \begin{frame}
+%   \frametitle{Overview}
+%
+%   \tableofcontents
+% \end{frame}
 
 
 % ---------------------------------------------------------------------------- %
@@ -99,9 +109,10 @@
     European Particle Physics Strategy:
     \begin{itemize}
       \item Investigate feasibility for FCC at CERN
-      \item Hadron collider: $\sqrt{s} = 100$~TeV
+      \item As global endeavor
+      \item Ring circumference 100 km
       \item Electron-positron collider as first step
-      \item Global endeavor
+      \item Hadron collider: $\sqrt{s} = 100$~TeV
     \end{itemize}
   \end{columns}
 \end{frame}
@@ -117,7 +128,7 @@
     \column{.5\textwidth}
     \begin{itemize}
       \item For precision physics
-      \item Higs factory
+      \item Higgs factory
       \item Electroweak precision $10^{-3} \rightarrow 10^{-5}$
     \end{itemize}
 
@@ -156,8 +167,223 @@
 \section{FCC Detectors}
 
 \begin{frame}
-  \frametitle{FCC Detectors}
+  \frametitle{FCC-ee: CLD Detector}
 
+  \begin{columns}[c]
+    \column{.6\textwidth}
+    \includegraphics[width=\linewidth]{figures/FCC_ee_CLD_text.png}
+
+    \column{.4\textwidth}
+    \begin{itemize}
+      \item Based on the detector for CLIC
+      \item Silicon vertex detector and tracker
+      \item 3D-imaging highly-granular calorimeter
+      \item Coil outside calorimeter system
+      \item Proved concept, understood performance
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{FCC-ee: IDEA Detector}
+
+  \begin{columns}[c]
+    \column{.6\textwidth}
+    \includegraphics[width=\linewidth]{figures/FCC_ee_IDEA.png}
+
+    \column{.4\textwidth}
+    \begin{itemize}
+      \item New, innovative, possibly more cost-effective design
+      \item Silicon vertex detector
+      \item Short-drift, ultra-light wire chamber
+      \item Dual-readout calorimeter
+      \item Thin and light solenoid coil inside calorimeter system
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{FCC-hh: Reference Detector}
+
+  \begin{adjustwidth}{-2em}{-2em}
+    \includegraphics[width=\linewidth]{figures/FCC_hh_ref_detector.png}
+  \end{adjustwidth}
+\end{frame}
+
+\begin{frame}
+  \frametitle{FCC-hh: Reference Detector}
+
+  \begin{adjustwidth}{-2em}{-2em}
+    \includegraphics[width=\linewidth]{figures/FCC_hh_ref_detector_xsec.pdf}
+  \end{adjustwidth}
+\end{frame}
+
+
+% ---------------------------------------------------------------------------- %
+\section{FCC Calorimetry}
+
+\begin{frame}
+  \frametitle{FCC Calorimetry}
+
+  \begin{columns}[c]
+    \column{.5\textwidth}
+    \bluetext{Requirements:}
+    \begin{itemize}
+      \item Jet-jet invariant mass resolution to resolve $W$ from $Z \sim 3$\%
+      \item EM resolution 15\% sufficient to sustain jet resolution
+            \begin{itemize}
+              \item Precise identification of $\gamma$'s and $\pi_0$'s in
+                    dense topologies
+            \end{itemize}
+      \item Crystal and LAr for good EM resolution
+      \item CALICE and Dual Readout good jet resolution
+    \end{itemize}
+
+    \column{.5\textwidth}
+    \bluetext{Energy resolution parametrization:}
+    \[ \frac{\sigma_\text{E}}{\langle E\,\rangle} = \frac{a}{\sqrt{E\,}} \oplus
+                                                    \frac{b}{E} \oplus c \]
+
+    \bluetext{Typical values:}
+    \begin{center}
+      \small
+      \begin{tabular}{lcc}
+        Technology   & $a$~[\%] & $c$~[\%] \\
+        \midrule
+        CALICE       & 15       & 1 \\
+        Dual Readout & 10       & 1 \\
+        LAr          & 9        & --- \\
+        Crystal      & 3--5     & 0.5 \\
+      \end{tabular}
+    \end{center}
+  \end{columns}
+
+  \vspace{2ex}
+  \redtext{High granularity and Particle Flow needed to achieve energy resolution
+           of 3\%}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Particle Flow}
+
+  \includegraphics[width=\linewidth]{figures/particle_flow_diagram.pdf}
+  \begin{adjustwidth}{-1em}{-1em}
+    \vspace{-1.5ex}
+    Composition: 30\% + 70\% \hspace{9.5em} 60\% + 30\% + 10\%
+  \end{adjustwidth}
+
+  \vspace{0.5em}
+  \bluetext{Idea:}
+  \begin{columns}[c]
+    \column{.5\textwidth}
+    \begin{itemize}
+      \item Reconstruct every particle in the event with the best possible
+            precision
+      \item Combine the measurements in subdetectors in an optimal way
+    \end{itemize}
+
+    \column{.5\textwidth}
+    \begin{itemize}
+      \item Charged particles dominated by tracker
+      \item Calorimetry mostly for neutral particles
+      \item \bluetext{Enemy: Confusion}
+    \end{itemize}
+  \end{columns}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{FCC-ee IDEA Calorimeter}
+
+  \bluetext{Traits:}
+  \begin{itemize}
+    \item Dual readout calorimeter with 1.5~mm fiber pitch
+          Cherenkov/Scintillation dual-readout
+    \item Single EM + HAD sampling calorimeter
+    \item No mechanical longitudinal segmentation ($\sim 7 \lambda_\text{I}$)
+    \item Good EM intrinsic energy resolution
+    \item Excellent hadronic resolution
+  \end{itemize}
+
+  \includegraphics[width=0.49\linewidth]{figures/IDEA_calorimeter_3dview.png}
+  \includegraphics[width=0.49\linewidth]{figures/IDEA_calorimeter_fibers.png}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{CALICE}
+
+  Collaboration of mostly Si/Tungsten based high granularity calorimeters
+
+  \begin{columns}[c]
+    \column{.4\textwidth}
+
+    \bluetext{Traits:}
+    \begin{itemize}
+      \item Large area silicon detectors
+      \item Si Photomultipliers
+      \item Highly integrated front-end electronics with timing
+      \item Very large number of channel
+    \end{itemize}
+
+    \column{.6\textwidth}
+    \includegraphics[width=\linewidth]{figures/CALICE_diagram.png}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{FCC-ee CLD Calorimeter}
+
+  \bluetext{CLD proposal:}
+  \begin{itemize}
+    \item 40 layers SiW ECAL (22 $X_0$)
+    \item 60 layers Scint/Steel HCAL (7.5 $\lambda_\text{I}$ +
+          1 $\lambda_\text{I}$ in ECAL)
+  \end{itemize}
+
+  \includegraphics[width=0.49\linewidth]{figures/CLD_jet_performance.pdf}
+  \includegraphics[width=0.49\linewidth]{figures/CLD_photon_performance.png}
+\end{frame}
+
+
+% ---------------------------------------------------------------------------- %
+\section{Noble Liquid (LAr) Calorimetery}
+
+\begin{frame}
+  \frametitle{Noble Liquid (LAr) Calorimetry}
+
+
+  \begin{columns}[c]
+    \column{.5\textwidth}
+    \begin{itemize}
+      \item Tested technology in ATLAS
+      \item Less than $10\%/\sqrt{E}$ demonstrated
+    \end{itemize}
+
+    \bluetext{Improvements for FCC-ee}
+    \begin{itemize}
+      \item Higher granularity
+            \begin{itemize}
+              \item Transverse and in depth
+              \item More signal traces
+            \end{itemize}
+      \item Improve EM resolution
+            \begin{itemize}
+              \item Higher sampling fraction $\rightarrow$ thicker detector
+            \end{itemize}
+      \item Low energy photons (300 MeV)
+            \begin{itemize}
+              \item Low mass cryostat
+              \item Smaller noise term
+            \end{itemize}
+    \end{itemize}
+
+    \column{.5\textwidth}
+    \includegraphics[width=.8\linewidth]{figures/FCC_hh_LAr_electron_performance_eta.pdf}
+    \includegraphics[width=.8\linewidth]{figures/FCC_hh_LAr_electron_performance_mu.pdf}
+  \end{columns}
 \end{frame}
 
 
@@ -165,19 +391,15 @@
 \section{Conclusions and Plans}
 
 \begin{frame}
-  \frametitle{Conclusions and Plans}
+  \frametitle{Conclusion and Plans}
 
   \begin{itemize}
-    \item Upper limit on IC in proton set with 68\% CL at
-          $w_\mathrm{u.l.} = 2\%$
-    \item Scale uncertainty is the dominant uncertainty
-    \item Measurement uncertainty dominated by light jet fraction uncertainty
-    \item Combined QCD exhibits lack of compatibility
-    \item IC contribution to $\gamma(Z) + c$-jet at 13 TeV is smaller
+    \item LAr calorimeters were investigated mostly for FCC-hh
+    \item Investigate LAr performance in the FCC-ee framework
           \begin{itemize}
-            \item Increase only around 30\% for $w = 3.5\%$
-            \item Smaller contribution of Compton scattering
+            \item Replace existing CLD/IDEA calorimeters with LAr
           \end{itemize}
+    \item Implement particle flow algorithm for LAr calorimeter
   \end{itemize}
 \end{frame}
 
