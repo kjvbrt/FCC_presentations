@@ -4,6 +4,7 @@
 \usepackage{changepage}
 \usepackage[export]{adjustbox}
 \usepackage{booktabs}
+\usepackage{graphbox}
 
 \usetheme[numbering=fraction,progressbar=frametitle,sectionpage=none]{metropolis}
 
@@ -63,7 +64,11 @@
 \institute[CU, SAS]{\inst{1} Charles University, Czechia \\
                     \inst{2} Slovak Academy of Sciences, Slovakia}
 \date[2020-Dec-03]{\footnotesize UNCE Seminar, Prague \\
-                   December 03, 2020} % \\
+                   December 03, 2020 \\
+                   \tiny Based on presentations at
+                   \href{https://indico.cern.ch/event/932973/}
+                        {4th FCC Physics and Experiments Workshop}}
+
                    % (Ab urbe condita 2773)}
 
 
@@ -106,10 +111,14 @@
     \tiny{Image: \href{https://alumni.cern/news/226282}{CERN}}
 
     \column{.4\textwidth}
-    European Particle Physics Strategy:
+    \bluetext{European Particle Physics Strategy:}
     \begin{itemize}
       \item Investigate feasibility for FCC at CERN
       \item As global endeavor
+    \end{itemize}
+
+    \bluetext{FCC Plan:}
+    \begin{itemize}
       \item Ring circumference 100 km
       \item Electron-positron collider as first step
       \item Hadron collider: $\sqrt{s} = 100$~TeV
@@ -123,13 +132,16 @@
   \includegraphics[width=.49\linewidth]{figures/FCC_ee_ring.png}
   \includegraphics[width=.49\linewidth]{figures/FCC_ee_operation_plan.png}
 
-  FCC-ee characteristics:
+  \bluetext{FCC-ee characteristics:}
+  {\footnotesize\hspace{5em}88--95\hspace{0.7em}\textcolor{blue}{158--162}
+  \hspace{0.7em}\textcolor{red}{240}\hspace{0.7em}\textcolor{green}{345--365}
+  GeV}
   \begin{columns}[c]
     \column{.5\textwidth}
     \begin{itemize}
       \item For precision physics
       \item Higgs factory
-      \item Electroweak precision $10^{-3} \rightarrow 10^{-5}$
+      \item EW couplings precision $10^{-3} \rightarrow 10^{-5}$
     \end{itemize}
 
     \column{.5\textwidth}
@@ -147,17 +159,17 @@
   \includegraphics[width=.49\linewidth]{figures/FCC_hh_ring.pdf}
   \includegraphics[width=.49\linewidth]{figures/FCC_hh_Zprime_ll.pdf}
 
-  FCC-hh characteristics:
-
   \begin{columns}[c]
     \column{.5\textwidth}
+    \bluetext{FCC-hh characteristics:}
     \begin{itemize}
       \item Continuation of energy frontier
     \end{itemize}
 
     \column{.5\textwidth}
     \begin{itemize}
-      \item Operation at 100 TeV energies
+      \item Operation at 100~TeV energies
+      \item 16~T magnets needed
     \end{itemize}
   \end{columns}
 \end{frame}
@@ -184,12 +196,48 @@
   \end{columns}
 \end{frame}
 
+
+\begin{frame}
+  \frametitle{CALICE}
+
+  Collaboration of mostly Si/Tungsten based high granularity calorimeters\\[1ex]
+  \bluetext{Traits:}
+  \begin{columns}[c]
+    \column{.4\textwidth}
+    \begin{itemize}
+      \item Large area silicon detectors
+      \item Si Photomultipliers
+      \item Highly integrated front-end electronics with timing
+      \item Very large number of channels
+    \end{itemize}
+
+    \column{.6\textwidth}
+    \includegraphics[width=\linewidth]{figures/CALICE_diagram.png}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{FCC-ee: CLD Calorimeter}
+
+  \bluetext{CLD proposal:}
+  \begin{itemize}
+    \item 40 layers SiW ECAL (22 $X_0$)
+    \item 60 layers Scint/Steel HCAL (7.5 $\lambda_\text{I}$ +
+          1 $\lambda_\text{I}$ in ECAL)
+  \end{itemize}
+
+  \includegraphics[width=0.49\linewidth]{figures/CLD_jet_performance.pdf}
+  \includegraphics[width=0.49\linewidth]{figures/CLD_photon_performance.png}
+\end{frame}
+
+
 \begin{frame}
   \frametitle{FCC-ee: IDEA Detector}
 
   \begin{columns}[c]
     \column{.6\textwidth}
-    \includegraphics[width=\linewidth]{figures/FCC_ee_IDEA.png}
+    \includegraphics[width=\linewidth]{figures/FCC_ee_IDEA.png}%
 
     \column{.4\textwidth}
     \begin{itemize}
@@ -202,20 +250,47 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}
-  \frametitle{FCC-hh: Reference Detector}
 
-  \begin{adjustwidth}{-2em}{-2em}
-    \includegraphics[width=\linewidth]{figures/FCC_hh_ref_detector.png}
-  \end{adjustwidth}
+\begin{frame}
+  \frametitle{FCC-ee: IDEA Calorimeter}
+
+  \bluetext{Traits:}
+  \begin{itemize}
+    \item Dual readout calorimeter with 1.5~mm pitch between
+          Cherenkov and Scintillation fibers
+    \item Single EM + HAD sampling calorimeter
+    \item No mechanical longitudinal segmentation ($\sim 7 \lambda_\text{I}$)
+    \item Good EM intrinsic energy resolution
+    \item Excellent hadronic resolution
+  \end{itemize}
+
+  \centering
+  \includegraphics[width=.7\linewidth]{figures/IDEA_calorimeter_flatview.png}
 \end{frame}
 
-\begin{frame}
-  \frametitle{FCC-hh: Reference Detector}
 
-  \begin{adjustwidth}{-2em}{-2em}
-    \includegraphics[width=\linewidth]{figures/FCC_hh_ref_detector_xsec.pdf}
-  \end{adjustwidth}
+\begin{frame}
+  \frametitle{Dual Readout Calorimeter}
+
+  \begin{columns}[c]
+    \column{.5\textwidth}
+    \bluetext{Principle:}
+    \begin{itemize}
+      \item Correct $f_\text{em}$ in every event
+            \begin{itemize}
+              \item Main source of fluctuations
+            \end{itemize}
+      \item Fibers pointing toward IP
+            \begin{itemize}
+              \item \bluetext{Scintillating:} sense charged
+              \item \bluetext{Clear:} sense Cherenkov, mostly electrons
+            \end{itemize}
+    \end{itemize}
+
+    \column{.5\textwidth}
+    \includegraphics[width=\linewidth]{figures/dual_readout_signal_example.png}
+    \includegraphics[width=\linewidth]{figures/IDEA_calorimeter_fibers.png}
+  \end{columns}
 \end{frame}
 
 
@@ -225,22 +300,25 @@
 \begin{frame}
   \frametitle{FCC Calorimetry}
 
+  \vspace{2ex}
   \begin{columns}[c]
     \column{.5\textwidth}
     \bluetext{Requirements:}
     \begin{itemize}
-      \item Jet-jet invariant mass resolution to resolve $W$ from $Z \sim 3$\%
-      \item EM resolution 15\% sufficient to sustain jet resolution
+      \item Jet-jet inv.\ mass resolution to resolve $W$ from $Z$
             \begin{itemize}
-              \item Precise identification of $\gamma$'s and $\pi_0$'s in
-                    dense topologies
+              \item requires $\sim 3$\% ($\sim 30\% / \sqrt{E}$\,)
+            \end{itemize}
+      \item EM resolution at minimum 15\% to sustain jet resolution\\[-0.4ex]
+            \begin{itemize}
+              \item $B_\text{S} \rightarrow D_\text{S}K$ requires $\sim 5$\%
             \end{itemize}
       \item Crystal and LAr for good EM resolution
       \item CALICE and Dual Readout good jet resolution
     \end{itemize}
 
     \column{.5\textwidth}
-    \bluetext{Energy resolution parametrization:}
+    \bluetext{Energy resolution param.:}
     \[ \frac{\sigma_\text{E}}{\langle E\,\rangle} = \frac{a}{\sqrt{E\,}} \oplus
                                                     \frac{b}{E} \oplus c \]
 
@@ -258,9 +336,9 @@
     \end{center}
   \end{columns}
 
-  \vspace{2ex}
-  \redtext{High granularity and Particle Flow needed to achieve energy resolution
-           of 3\%}
+  \vspace{1ex}
+  \redtext{High granularity and Particle Flow needed to achieve energy
+           resolution of 3\%}
 \end{frame}
 
 
@@ -295,56 +373,24 @@
 
 
 \begin{frame}
-  \frametitle{FCC-ee IDEA Calorimeter}
-
-  \bluetext{Traits:}
-  \begin{itemize}
-    \item Dual readout calorimeter with 1.5~mm fiber pitch
-          Cherenkov/Scintillation dual-readout
-    \item Single EM + HAD sampling calorimeter
-    \item No mechanical longitudinal segmentation ($\sim 7 \lambda_\text{I}$)
-    \item Good EM intrinsic energy resolution
-    \item Excellent hadronic resolution
-  \end{itemize}
-
-  \includegraphics[width=0.49\linewidth]{figures/IDEA_calorimeter_3dview.png}
-  \includegraphics[width=0.49\linewidth]{figures/IDEA_calorimeter_fibers.png}
-
-\end{frame}
-
-\begin{frame}
-  \frametitle{CALICE}
-
-  Collaboration of mostly Si/Tungsten based high granularity calorimeters
+  \frametitle{Crystal Calorimeters}
 
   \begin{columns}[c]
-    \column{.4\textwidth}
-
+    \column{.5\textwidth}
     \bluetext{Traits:}
     \begin{itemize}
-      \item Large area silicon detectors
-      \item Si Photomultipliers
-      \item Highly integrated front-end electronics with timing
-      \item Very large number of channel
+      \item Mostly investigated for CEPC
+      \item Used by CMS
+      \item Homogeneous structure
+      \item Has optimal intrinsic energy resolution:
+            $\sim 3\%/\sqrt{E\,} \, \oplus \sim 1\%$
     \end{itemize}
 
-    \column{.6\textwidth}
-    \includegraphics[width=\linewidth]{figures/CALICE_diagram.png}
+    \column{.5\textwidth}
+    \includegraphics[width=\linewidth]{figures/CEPC_crystal_calo_design1.png}%
+    \vspace{6ex}
+    \includegraphics[width=\linewidth]{figures/CEPC_crystal_calo_design2.png}
   \end{columns}
-\end{frame}
-
-\begin{frame}
-  \frametitle{FCC-ee CLD Calorimeter}
-
-  \bluetext{CLD proposal:}
-  \begin{itemize}
-    \item 40 layers SiW ECAL (22 $X_0$)
-    \item 60 layers Scint/Steel HCAL (7.5 $\lambda_\text{I}$ +
-          1 $\lambda_\text{I}$ in ECAL)
-  \end{itemize}
-
-  \includegraphics[width=0.49\linewidth]{figures/CLD_jet_performance.pdf}
-  \includegraphics[width=0.49\linewidth]{figures/CLD_photon_performance.png}
 \end{frame}
 
 
@@ -352,8 +398,7 @@
 \section{Noble Liquid (LAr) Calorimetery}
 
 \begin{frame}
-  \frametitle{Noble Liquid (LAr) Calorimetry}
-
+  \frametitle{Noble Liquid (LAr) Calorimetry I}
 
   \begin{columns}[c]
     \column{.5\textwidth}
@@ -373,7 +418,8 @@
             \begin{itemize}
               \item Higher sampling fraction $\rightarrow$ thicker detector
             \end{itemize}
-      \item Low energy photons (300 MeV)
+      \item Low energy photons \\
+            (bellow 300 MeV)
             \begin{itemize}
               \item Low mass cryostat
               \item Smaller noise term
@@ -381,9 +427,29 @@
     \end{itemize}
 
     \column{.5\textwidth}
-    \includegraphics[width=.8\linewidth]{figures/FCC_hh_LAr_electron_performance_eta.pdf}
     \includegraphics[width=.8\linewidth]{figures/FCC_hh_LAr_electron_performance_mu.pdf}
+    \includegraphics[width=.8\linewidth]{figures/FCC_hh_LAr_pion_performance.pdf}
   \end{columns}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Noble Liquid (LAr) Calorimetry II}
+
+  \begin{itemize}
+    \item Optimization using FCCSW will be performed
+          \begin{itemize}
+            \item Granularity, sampling frequency, sampling fraction
+            \item Active material (Krypton, \dots)
+            \item Absorber material (Tungsten, \dots)
+          \end{itemize}
+    \item Multiple R\&D projects directed at LAr at FCC-ee
+  \end{itemize}
+
+  \includegraphics[align=c,width=0.47\linewidth]{figures/FCC_hh_LAr_diagram.png}%
+  \hfill
+  \includegraphics[align=c,width=0.47\linewidth]{figures/FCC_ee_LAr_diagram.png}\\[2ex]
+  \hspace{6em}FCC-hh\hspace{11em}FCC-ee
 \end{frame}
 
 
@@ -400,16 +466,67 @@
             \item Replace existing CLD/IDEA calorimeters with LAr
           \end{itemize}
     \item Implement particle flow algorithm for LAr calorimeter
+    \item Multiple R\&D projects directed at LAr at FCC-ee
   \end{itemize}
 \end{frame}
 
-% \appendix
-% \backupbegin{}
-%
-% \begin{frame}
-%   \frametitle{Backup}
-% \end{frame}
-%
-% \backupend{}
+\appendix
+\backupbegin{}
+
+\begin{frame}[c]
+  \begin{center}
+    \redtext{\Huge Backup}
+  \end{center}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{R\&D FCC-ee LAr Projects}
+
+  CERN EP R\&D projects relevant for Noble Liquid Calorimetry:
+
+  \begin{enumerate}
+    \item Read-Out Electrode Design and Performance Optimization
+    \item High Density Feed Through Design Investigations
+    \item Carbon Composite Cryostats
+    \item General SW framework
+  \end{enumerate}
+
+  CERN, Charles U. and LAL Orsay: H2020 project AIDAInnova
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Dual Readout Performance}
+
+  \includegraphics[width=\linewidth]{figures/dual_readout_performance.pdf}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Crystals Performance}
+
+  \includegraphics[width=.49\linewidth]{figures/CEPC_crystal_calo_perf_4layers.png}
+  \includegraphics[width=.49\linewidth]{figures/CEPC_crystal_calo_perf_4layers.png}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{FCC-hh: Reference Detector}
+
+  \begin{adjustwidth}{-2em}{-2em}
+    \includegraphics[width=\linewidth]{figures/FCC_hh_ref_detector.png}
+  \end{adjustwidth}
+\end{frame}
+
+\begin{frame}
+  \frametitle{FCC-hh: Reference Detector}
+
+  \begin{adjustwidth}{-2em}{-2em}
+    \includegraphics[width=\linewidth]{figures/FCC_hh_ref_detector_xsec.pdf}
+  \end{adjustwidth}
+\end{frame}
+
+\backupend{}
 
 \end{document}
