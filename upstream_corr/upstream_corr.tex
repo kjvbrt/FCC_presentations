@@ -23,7 +23,7 @@
 \definecolor{myBlue}{RGB}{21, 56, 110}
 \definecolor{myRed}{RGB}{174,0,34}
 \definecolor{myRedBg}{RGB}{251, 217, 224}
-\definecolor{greySAV}{RGB}{167,166,166}
+\definecolor{greySAS}{RGB}{167,166,166}
 \definecolor{greyCU}{RGB}{44,46,53}
 
 \setbeamercolor{title}{fg=myBlue}
@@ -60,15 +60,14 @@
 % Title
 \title[FCCcalo]{FCC-ee: Upstream Correction}
 \author[Smiesko, Faltova]{Jana~Faltová\inst{1},
-                          Juraj~Smieško\inst{1,2}}
-                          % \underline{Juraj~Smieško}\inst{1,2}}
+                          \underline{Juraj~Smieško}\inst{1,2}}
 \institute[CU, SAS]{\inst{1} Charles University, Czechia \\
                     \inst{2} Slovak Academy of Sciences, Slovakia}
-\date[2020-Dec-03]{\footnotesize
-                   Noble Liquid Calorimetry for Future Accelerator
-                   Experiments, CERN \\
-                   December 17, 2020} % \\
-                   % (Ab urbe condita 2773)}
+\date[2021-Jan-28]{\footnotesize
+                   Noble Liquid Calorimetry for Future Accelerator Experiments,
+                   CERN \\
+                   January 28, 2021}
+\titlegraphic{\vspace{6.5cm}\centering\includegraphics[width=0.8\linewidth]{figures/logolink_OP_VVV_hor_barva_eng.jpg}}
 
 
 % ---------------------------------------------------------------------------- %
@@ -79,7 +78,7 @@
   \begin{frame}[noframenumbering]
     \centering
     \vspace{1cm}
-    \includegraphics[width=.25\textwidth]{figures/CU_red_white_logo.pdf}
+    \includegraphics[width=.3\textwidth]{figures/CU_red_white_logo.pdf}
     \thispagestyle{empty}
   \end{frame}
 }
@@ -101,9 +100,13 @@
 \section{Upstream Correction}
 
 \begin{frame}
-  \frametitle{Upstream Correction}
+  \frametitle{Upstream Correction at FCC-hh Calorimeter}
 
-  Parametrization for FCC-hh:
+  \redtext{FCC-hh} parametrization:
+
+  \begin{equation*}
+    E = E_\text{upstream} + E_\text{cluster}
+  \end{equation*}
 
   \begin{equation*}
   E_\text{upstream} = P_0(E_\text{cluster}, |\eta|) +
@@ -115,9 +118,9 @@
     P_1 = P_{10}(|\eta|) + \frac{P_{11}(|\eta|)}{\sqrt{E_{cluster}}}
   \end{equation*}
 
-  % \begin{equation}
-  %   E = E_\text{upstream} + E_\text{cluster}
-  % \end{equation}
+  \begin{center}
+    No $\eta$ dependence
+  \end{center}
 
   % \begin{equation}
   %   E_\text{cluster} = \sum_\text{deposits} E_{deposits} \cdot
@@ -133,110 +136,164 @@
 
 
 \begin{frame}
-  \frametitle{P0 and P1 Fit}
+  \frametitle{FCC-ee IDEA-LAr Upstream Correction}
 
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/graph_upstream_corr_param0.pdf}
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/graph_upstream_corr_param1.pdf}
+  \redtext{FCC-ee} IDEA-LAr parametrization:
+
+  \begin{equation*}
+    E = E_\text{upstream} + E_\text{cluster}
+  \end{equation*}
+
+  \begin{equation*}
+  E_\text{upstream} = P_0(E_\text{cluster}, |\eta|) +
+                      P_1(E_\text{cluster}, |\eta|) \cdot E_\text{firstLayer}
+  \end{equation*}
+
+  \begin{equation*}
+    P_0 = P_{00}(|\eta|) + P_{01}(|\eta|) \cdot E_{cluster}  \qquad
+    P_1 = \bluetext{?}
+  \end{equation*}
+
+  \begin{center}
+    $\eta$ dependence \bluetext{?}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{FCC-ee IDEA-LAr Upstream Correction}
+
+  \begin{center}
+    Energy dependence, Layer \redtext{ID:\@ 0} \\
+    $P_1 = P_{10}(|\eta|) + P_{11}(|\eta|) \cdot E_{cluster}$
+  \end{center}
+
+  \includegraphics[width=0.49\linewidth]{figures/momentum_id0/graph_upstream_corr_param0.pdf}
+  \includegraphics[width=0.49\linewidth]{figures/momentum_id0/graph_upstream_corr_param1.pdf}
+\end{frame}
+
+\begin{frame}
+  \frametitle{FCC-ee IDEA-LAr Upstream Correction}
+
+  \begin{center}
+    Energy dependence, Layer \redtext{ID:\@ 1} \\
+    $ P_1 = P_{10}(|\eta|) + \frac{P_{11}(|\eta|)}{\sqrt{E_{cluster}}} $
+  \end{center}
+
+  \includegraphics[width=0.49\linewidth]{figures/momentum_id1/graph_upstream_corr_param0.pdf}
+  \includegraphics[width=0.49\linewidth]{figures/momentum_id1/graph_upstream_corr_param1.pdf}
 \end{frame}
 
 \begin{frame}
   \frametitle{At 10 GeV}
 
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/hist_upstream_vs_first_layer_10GeV.pdf}
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/profile_upstream_vs_first_layer_10GeV.pdf}
+  \centering
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id0/hist_upstream_vs_first_layer_90deg_10GeV.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id0/profile_upstream_vs_first_layer_90deg_10GeV.pdf} \\
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id1/hist_upstream_vs_first_layer_90deg_10GeV.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id1/profile_upstream_vs_first_layer_90deg_10GeV.pdf}
 \end{frame}
-
 
 \begin{frame}
   \frametitle{At 15 GeV}
 
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/hist_upstream_vs_first_layer_15GeV.pdf}
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/profile_upstream_vs_first_layer_15GeV.pdf}
+  \centering
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id0/hist_upstream_vs_first_layer_90deg_15GeV.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id0/profile_upstream_vs_first_layer_90deg_15GeV.pdf} \\
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id1/hist_upstream_vs_first_layer_90deg_15GeV.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id1/profile_upstream_vs_first_layer_90deg_15GeV.pdf}
 \end{frame}
 
 \begin{frame}
   \frametitle{At 20 GeV}
 
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/hist_upstream_vs_first_layer_20GeV.pdf}
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/profile_upstream_vs_first_layer_20GeV.pdf}
+  \centering
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id0/hist_upstream_vs_first_layer_90deg_20GeV.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id0/profile_upstream_vs_first_layer_90deg_20GeV.pdf} \\
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id1/hist_upstream_vs_first_layer_90deg_20GeV.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id1/profile_upstream_vs_first_layer_90deg_20GeV.pdf}
+\end{frame}
+
+\begin{frame}
+  \frametitle{At 25 GeV}
+
+  \centering
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id0/hist_upstream_vs_first_layer_90deg_25GeV.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id0/profile_upstream_vs_first_layer_90deg_25GeV.pdf} \\
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id1/hist_upstream_vs_first_layer_90deg_25GeV.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id1/profile_upstream_vs_first_layer_90deg_25GeV.pdf}
 \end{frame}
 
 \begin{frame}
   \frametitle{At 30 GeV}
 
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/hist_upstream_vs_first_layer_30GeV.pdf}
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/profile_upstream_vs_first_layer_30GeV.pdf}
+  \centering
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id0/hist_upstream_vs_first_layer_90deg_30GeV.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id0/profile_upstream_vs_first_layer_90deg_30GeV.pdf} \\
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id1/hist_upstream_vs_first_layer_90deg_30GeV.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id1/profile_upstream_vs_first_layer_90deg_30GeV.pdf}
 \end{frame}
 
 \begin{frame}
   \frametitle{At 50 GeV}
 
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/hist_upstream_vs_first_layer_50GeV.pdf}
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/profile_upstream_vs_first_layer_50GeV.pdf}
+  \centering
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id0/hist_upstream_vs_first_layer_90deg_50GeV.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id0/profile_upstream_vs_first_layer_90deg_50GeV.pdf} \\
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id1/hist_upstream_vs_first_layer_90deg_50GeV.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id1/profile_upstream_vs_first_layer_90deg_50GeV.pdf}
 \end{frame}
 
 \begin{frame}
-  \frametitle{At 80 GeV}
+  \frametitle{At 75 GeV}
 
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/hist_upstream_vs_first_layer_80GeV.pdf}
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/profile_upstream_vs_first_layer_80GeV.pdf}
+  \centering
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id0/hist_upstream_vs_first_layer_90deg_75GeV.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id0/profile_upstream_vs_first_layer_90deg_75GeV.pdf} \\
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id1/hist_upstream_vs_first_layer_90deg_75GeV.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id1/profile_upstream_vs_first_layer_90deg_75GeV.pdf}
 \end{frame}
 
 \begin{frame}
   \frametitle{At 100 GeV}
 
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/hist_upstream_vs_first_layer_100GeV.pdf}
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/profile_upstream_vs_first_layer_100GeV.pdf}
+  \centering
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id0/hist_upstream_vs_first_layer_90deg_100GeV.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id0/profile_upstream_vs_first_layer_90deg_100GeV.pdf} \\
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id1/hist_upstream_vs_first_layer_90deg_100GeV.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id1/profile_upstream_vs_first_layer_90deg_100GeV.pdf}
 \end{frame}
 
 \begin{frame}
-  \frametitle{At 120 GeV}
+  \frametitle{At 125 GeV}
 
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/hist_upstream_vs_first_layer_120GeV.pdf}
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/profile_upstream_vs_first_layer_120GeV.pdf}
+  \centering
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id0/hist_upstream_vs_first_layer_90deg_125GeV.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id0/profile_upstream_vs_first_layer_90deg_125GeV.pdf} \\
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id1/hist_upstream_vs_first_layer_90deg_125GeV.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id1/profile_upstream_vs_first_layer_90deg_125GeV.pdf}
 \end{frame}
 
 \begin{frame}
   \frametitle{At 150 GeV}
 
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/hist_upstream_vs_first_layer_150GeV.pdf}
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/profile_upstream_vs_first_layer_150GeV.pdf}
-\end{frame}
-
-\begin{frame}
-  \frametitle{At 170 GeV}
-
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/hist_upstream_vs_first_layer_100GeV.pdf}
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/profile_upstream_vs_first_layer_100GeV.pdf}
-\end{frame}
-
-\begin{frame}
-  \frametitle{At 100 GeV}
-
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/hist_upstream_vs_first_layer_170GeV.pdf}
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/profile_upstream_vs_first_layer_170GeV.pdf}
+  \centering
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id0/hist_upstream_vs_first_layer_90deg_150GeV.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id0/profile_upstream_vs_first_layer_90deg_150GeV.pdf} \\
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id1/hist_upstream_vs_first_layer_90deg_150GeV.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id1/profile_upstream_vs_first_layer_90deg_150GeV.pdf}
 \end{frame}
 
 \begin{frame}
   \frametitle{At 200 GeV}
 
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/hist_upstream_vs_first_layer_200GeV.pdf}
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/profile_upstream_vs_first_layer_200GeV.pdf}
+  \centering
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id0/hist_upstream_vs_first_layer_90deg_200GeV.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id0/profile_upstream_vs_first_layer_90deg_200GeV.pdf} \\
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id1/hist_upstream_vs_first_layer_90deg_200GeV.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/momentum_id1/profile_upstream_vs_first_layer_90deg_200GeV.pdf}
 \end{frame}
 
-\begin{frame}
-  \frametitle{At 250 GeV}
 
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/hist_upstream_vs_first_layer_250GeV.pdf}
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/profile_upstream_vs_first_layer_250GeV.pdf}
-\end{frame}
-
-\begin{frame}
-  \frametitle{At 300 GeV}
-
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/hist_upstream_vs_first_layer_300GeV.pdf}
-  \includegraphics[width=0.49\linewidth]{../../FCC_tools/calo_upstream_corr/output/profile_upstream_vs_first_layer_300GeV.pdf}
-\end{frame}
 
 % ---------------------------------------------------------------------------- %
 % \section{Conclusions and Plans}
