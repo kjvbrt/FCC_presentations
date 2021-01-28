@@ -97,6 +97,80 @@
 
 
 % ---------------------------------------------------------------------------- %
+\section{LAr Calorimeter FCC-hh vs. FCC-ee}
+
+\begin{frame}
+  \frametitle{LAr Calorimeter FCC-hh vs. FCC-ee}
+
+  \begin{itemize}
+    \item Going from FCC-hh calorimeter to FCC-ee:
+          \begin{itemize}
+            \item Loss of 15~cm in barrel thickness
+            \item Current thickness: $\sim 19 X_0$ at $\theta = \pi/2$
+          \end{itemize}
+    \item Geometry on the right used for FCC-ee calculations
+  \end{itemize}
+
+
+  \includegraphics[width=0.49\linewidth]{figures/lar_calo_fcchh.png}
+  \includegraphics[width=0.49\linewidth]{figures/lar_calo_fccee.png}
+
+  {\tiny
+   \href{https://indico.cern.ch/event/969249/contributions/4086276/attachments/2132741/3591642/20201029_LAr_workingMeeting_Brieuc.pdf}
+        {source: Brieuc François (CERN)}}
+\end{frame}
+
+
+% ---------------------------------------------------------------------------- %
+\section{Location of energy deposits}
+
+\begin{frame}
+  \frametitle{FCC-hh: Energy deposits}
+
+  \begin{itemize}
+    \item FCC-hh, electron, 50 GeV, $\theta = \pi/2$
+    \item Energy deposited in front cryostat and in the calorimeter
+  \end{itemize}
+
+  \includegraphics[width=0.49\linewidth]{figures/energy_fcchh/energyInCryo.pdf}
+  \includegraphics[width=0.49\linewidth]{figures/energy_fcchh/sumEinLayers.pdf}
+\end{frame}
+
+\begin{frame}
+  \frametitle{FCC-hh: Energy deposits}
+
+  \centering
+  \includegraphics[width=0.39\linewidth]{figures/energy_fcchh/energyInCryoFront.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/energy_fcchh/energyInCryoBack.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/energy_fcchh/energyInCryoLArBathFront.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/energy_fcchh/energyInCryoLArBathBack.pdf}
+\end{frame}
+
+\begin{frame}
+  \frametitle{FCC-ee: Energy deposits}
+
+  \begin{itemize}
+    \item FCC-ee, electron, 50 GeV, $\theta = \pi/2$
+    \item Energy deposited not only in front cryostat and in the
+          calorimeter, \redtext{but in the back cryostat as well}
+  \end{itemize}
+
+  \includegraphics[width=0.49\linewidth]{figures/energy_fccee/energyInCryo.pdf}
+  \includegraphics[width=0.49\linewidth]{figures/energy_fccee/sumEinLayers.pdf}
+\end{frame}
+
+\begin{frame}
+  \frametitle{FCC-ee: Energy deposits}
+
+  \centering
+  \includegraphics[width=0.39\linewidth]{figures/energy_fccee/energyInCryoFront.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/energy_fccee/energyInCryoBack.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/energy_fccee/energyInCryoLArBathFront.pdf}
+  \includegraphics[width=0.39\linewidth]{figures/energy_fccee/energyInCryoLArBathBack.pdf}
+\end{frame}
+
+
+% ---------------------------------------------------------------------------- %
 \section{Upstream Correction}
 
 \begin{frame}
@@ -121,17 +195,95 @@
   \begin{center}
     No $\eta$ dependence
   \end{center}
+\end{frame}
 
-  % \begin{equation}
-  %   E_\text{cluster} = \sum_\text{deposits} E_{deposits} \cdot
-  %                                           f_\text{sampl}^\text{\,layer}
-  % \end{equation}
+\begin{frame}
+  \frametitle{Upstream Correction FCC-hh vs. FCC-ee}
 
-  % \begin{equation}
-  %   E_\text{upstream} = P_{00} + P_{01} \cdot E_\text{cluster} +
-  %                       \left( P_{10} + \frac{P_{11}}{\sqrt{E_\text{cluster}}}
-  %                       \right) \cdot E_\text{firstLayer}
-  % \end{equation}
+  \begin{itemize}
+    \item Energy deposited in first layer correlates with upstream energy for
+          both FCC-hh and FCC-ee
+    \item Smaller upstream energy $\rightarrow$ thinner front LAr bath
+          \begin{itemize}
+            \item 90~mm $\rightarrow$ 20~mm
+          \end{itemize}
+    \item Smaller energy in first layer $\rightarrow$ thinner first layer
+          (presampler)
+          \begin{itemize}
+            \item plate length 2.69~cm $\rightarrow$ 1.74~cm
+          \end{itemize}
+  \end{itemize}
+
+  \includegraphics[width=0.49\linewidth]{figures/fcchh_hist_upstream_vs_first_layer_90deg_50GeV.pdf}
+  \includegraphics[width=0.49\linewidth]{figures/fccee_hist_upstream_vs_first_layer_90deg_50GeV.pdf}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Upstream Correction FCC-hh vs. FCC-ee}
+
+  \begin{itemize}
+    \item Energy deposited in first layer correlates with upstream energy for
+          both FCC-hh and FCC-ee
+    \item Smaller upstream energy $\rightarrow$ thinner front LAr bath
+          \begin{itemize}
+            \item 90~mm $\rightarrow$ 20~mm
+          \end{itemize}
+    \item Smaller energy in first layer $\rightarrow$ thinner first layer
+          (presampler)
+          \begin{itemize}
+            \item plate length 2.69~cm $\rightarrow$ 1.74~cm
+          \end{itemize}
+  \end{itemize}
+
+  \includegraphics[width=0.49\linewidth]{figures/fcchh_profile_upstream_vs_first_layer_90deg_50GeV.pdf}
+  \includegraphics[width=0.49\linewidth]{figures/fccee_profile_upstream_vs_first_layer_90deg_50GeV.pdf}
+\end{frame}
+
+\begin{frame}
+  \frametitle{FCC-ee: Energy in Layer vs. Cryo energy}
+
+  \begin{itemize}
+    \item No correlation between energy in full cryostat and energy in first
+          layer
+    \item Correlation between last layer (id: 7) and full cryostat energy
+          \begin{itemize}
+            \item Dominated by energy of the back cryostat
+          \end{itemize}
+    \item FCC-ee, $e^{-}$, 50 GeV, $\theta = \pi/2$
+  \end{itemize}
+
+  \includegraphics[width=0.49\linewidth]{figures/layer0_whole_cryo.pdf}
+  \includegraphics[width=0.49\linewidth]{figures/layer_7_whole_cryo.pdf}
+\end{frame}
+
+
+% ---------------------------------------------------------------------------- %
+\section{Conclusions and Plans}
+
+\begin{frame}
+  \frametitle{Conclusion and Plans}
+
+  \begin{itemize}
+    \item For FCC-ee large energy leakage observed
+    \item Also, upstream correction significantly smaller
+    \item Further optimization to be discussed
+    \item Replacement of upstream correction with other energy correction
+    \item Investigate minor issues:
+          \begin{itemize}
+            \item No energy in back LAr bath
+            \item Correlation between last layer and back cryostat
+          \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\appendix
+\backupbegin{}
+
+\begin{frame}[c]
+  \begin{center}
+    \redtext{\Huge Backup}
+  \end{center}
 \end{frame}
 
 
@@ -412,33 +564,6 @@
   \includegraphics[width=0.39\linewidth]{figures/theta_id1/profile_upstream_vs_first_layer_45deg_50GeV.pdf}
 \end{frame}
 
-% ---------------------------------------------------------------------------- %
-% \section{Conclusions and Plans}
-%
-% \begin{frame}
-%   \frametitle{Conclusion and Plans}
-%
-%   \begin{itemize}
-%     \item LAr calorimeters were investigated mostly for FCC-hh
-%     \item Investigate LAr performance in the FCC-ee framework
-%           \begin{itemize}
-%             \item Replace existing CLD/IDEA calorimeters with LAr
-%           \end{itemize}
-%     \item Implement particle flow algorithm for LAr calorimeter
-%     \item Multiple R\&D projects directed at LAr at FCC-ee
-%   \end{itemize}
-% \end{frame}
-
-
-% \appendix
-% \backupbegin{}
-
-% \begin{frame}[c]
-%   \begin{center}
-%     \redtext{\Huge Backup}
-%   \end{center}
-% \end{frame}
-
-% \backupend{}
+\backupend{}
 
 \end{document}
