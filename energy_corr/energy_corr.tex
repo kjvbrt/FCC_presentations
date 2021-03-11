@@ -63,10 +63,10 @@
                           \underline{Juraj~Smieško}\inst{1,2}}
 \institute[CU, SAS]{\inst{1} Charles University, Czechia \\
                     \inst{2} Slovak Academy of Sciences, Slovakia}
-\date[2021-Jan-28]{\footnotesize
+\date[2021-Mar-11]{\footnotesize
                    Noble Liquid Calorimetry for Future Accelerator Experiments,
                    CERN \\
-                   February 25, 2021}
+                   March 11, 2021}
 \titlegraphic{\vspace{6.5cm}\centering\includegraphics[width=0.8\linewidth]{figures/logolink_OP_VVV_hor_barva_eng.jpg}}
 
 
@@ -120,22 +120,22 @@
         {source: Brieuc François (CERN)}}
 \end{frame}
 
-\begin{frame}
-  \frametitle{FCC-ee LAr Calorimeter Thickness}
-
-  \begin{columns}[c]
-    \column{.4\textwidth}
-    LAr Thickness at $\theta = \pi/2$:
-    \begin{itemize}
-      \small
-      \item No cryostat: 21.5 $X_0$
-      \item With cryostat: 23.2 $X_0$
-    \end{itemize}
-
-    \column{.6\textwidth}
-    \includegraphics[width=\linewidth]{figures/x0.pdf}
-  \end{columns}
-\end{frame}
+% \begin{frame}
+%   \frametitle{FCC-ee LAr Calorimeter Thickness}
+% 
+%   \begin{columns}[c]
+%     \column{.4\textwidth}
+%     LAr Thickness at $\theta = \pi/2$:
+%     \begin{itemize}
+%       \small
+%       \item No cryostat: 21.5 $X_0$
+%       \item With cryostat: 23.2 $X_0$
+%     \end{itemize}
+% 
+%     \column{.6\textwidth}
+%     \includegraphics[width=\linewidth]{figures/x0.pdf}
+%   \end{columns}
+% \end{frame}
 
 
 % ---------------------------------------------------------------------------- %
@@ -155,6 +155,12 @@
           (< 0.003 GeV for $e^{-}$, 100 GeV, $\theta = \pi/2$)
     \item Those correlations are exploited to create \redtext{upstream}
           and \redtext{downstream} energy corrections
+    \item \bluetext{\bf This presentation:}
+          \begin{itemize}
+            \item \bluetext{\bf Corrections derived for 12 layer version of FCC-ee LAr
+              Calorimeter (Merged Brieuc's branch)}
+            \item \bluetext{\bf Back cryostat extended to 1100~mm}
+          \end{itemize}
   \end{itemize}
 \end{frame}
 
@@ -162,36 +168,22 @@
   \frametitle{FCC-ee: Energy deposits outside calorimeter II.}
 
   \centering
-  FCC-ee, $e^{-}$, \redtext{100 GeV}, $\theta = \pi/2$, back cryostat
-  thickness + 1m \\[1.5ex]
-  \includegraphics[width=0.3\linewidth]{figures/energy_deposits/energyInCalo.pdf}
-  \includegraphics[width=0.3\linewidth]{figures/energy_deposits/energyInCryoFront.pdf}
-  \includegraphics[width=0.3\linewidth]{figures/energy_deposits/energyInCryoBack.pdf}
-  \includegraphics[width=0.3\linewidth]{figures/energy_deposits/energyInCryo.pdf}
-  \includegraphics[width=0.3\linewidth]{figures/energy_deposits/energyInCryoLArBathFront.pdf}
-  \includegraphics[width=0.3\linewidth]{figures/energy_deposits/energyInCryoLArBathBack.pdf}
+  FCC-ee, $e^{-}$, \redtext{20 GeV}, $\theta = \pi/2$ \\[1.5ex]
+  \begin{adjustwidth}{-9mm}{-9mm}
+    \includegraphics[width=0.49\linewidth]{figures/12layers/hist_upstream_vs_layer_0_90deg_20GeV.png}
+    \includegraphics[width=0.49\linewidth]{figures/12layers/profile_upstream_vs_layer_0_90deg_20GeV.png}
+  \end{adjustwidth}
+  \redtext{Upstream} energy vs.\ energy in first layer
 \end{frame}
 
 \begin{frame}
   \frametitle{FCC-ee: Energy deposits outside calorimeter III.}
 
   \centering
-  FCC-ee, $e^{-}$, \redtext{20 GeV}, $\theta = \pi/2$ \\[1.5ex]
-  \begin{adjustwidth}{-9mm}{-9mm}
-    \includegraphics[width=0.49\linewidth]{figures/upstream/hist_upstream_vs_layer_0_90deg_20GeV.pdf}
-    \includegraphics[width=0.49\linewidth]{figures/upstream/profile_upstream_vs_layer_0_90deg_20GeV.pdf}
-  \end{adjustwidth}
-  \redtext{Upstream} energy vs.\ energy in first layer
-\end{frame}
-
-\begin{frame}
-  \frametitle{FCC-ee: Energy deposits outside calorimeter IV.}
-
-  \centering
   FCC-ee, $e^{-}$, \redtext{100 GeV}, $\theta = \pi/2$ \\[1.5ex]
   \begin{adjustwidth}{-9mm}{-9mm}
-    \includegraphics[width=0.49\linewidth]{figures/upstream/hist_upstream_vs_layer_0_90deg_100GeV.pdf}
-    \includegraphics[width=0.49\linewidth]{figures/upstream/profile_upstream_vs_layer_0_90deg_100GeV.pdf}
+    \includegraphics[width=0.49\linewidth]{figures/12layers/hist_upstream_vs_layer_0_90deg_100GeV.png}
+    \includegraphics[width=0.49\linewidth]{figures/12layers/profile_upstream_vs_layer_0_90deg_100GeV.png}
   \end{adjustwidth}
   \redtext{Upstream} energy vs.\ energy in first layer
 \end{frame}
@@ -202,8 +194,8 @@
   \centering
   FCC-ee, $e^{-}$, \redtext{250 GeV}, $\theta = \pi/2$ \\[1.5ex]
   \begin{adjustwidth}{-9mm}{-9mm}
-    \includegraphics[width=0.49\linewidth]{figures/upstream/hist_upstream_vs_layer_0_90deg_250GeV.pdf}
-    \includegraphics[width=0.49\linewidth]{figures/upstream/profile_upstream_vs_layer_0_90deg_250GeV.pdf}
+    \includegraphics[width=0.49\linewidth]{figures/12layers/hist_upstream_vs_layer_0_91deg_250GeV.png}
+    \includegraphics[width=0.49\linewidth]{figures/12layers/profile_upstream_vs_layer_0_91deg_250GeV.png}
   \end{adjustwidth}
   \redtext{Upstream} energy vs.\ energy in first layer
 \end{frame}
@@ -214,8 +206,8 @@
   \centering
   FCC-ee, $e^{-}$, \redtext{20 GeV}, $\theta = \pi/2$ \\[1.5ex]
   \begin{adjustwidth}{-9mm}{-9mm}
-    \includegraphics[width=0.49\linewidth]{figures/downstream/hist_downstream_vs_layer_7_90deg_20GeV.pdf}
-    \includegraphics[width=0.49\linewidth]{figures/downstream/profile_downstream_vs_layer_7_90deg_20GeV.pdf}
+    \includegraphics[width=0.49\linewidth]{figures/12layers/hist_downstream_vs_layer_11_90deg_20GeV.png}
+    \includegraphics[width=0.49\linewidth]{figures/12layers/profile_downstream_vs_layer_11_90deg_20GeV.png}
   \end{adjustwidth}
   \redtext{Downstream} energy vs.\ energy in last layer
 \end{frame}
@@ -226,8 +218,8 @@
   \centering
   FCC-ee, $e^{-}$, \redtext{100 GeV}, $\theta = \pi/2$ \\[1.5ex]
   \begin{adjustwidth}{-9mm}{-9mm}
-    \includegraphics[width=0.49\linewidth]{figures/downstream/hist_downstream_vs_layer_7_90deg_100GeV.pdf}
-    \includegraphics[width=0.49\linewidth]{figures/downstream/profile_downstream_vs_layer_7_90deg_100GeV.pdf}
+    \includegraphics[width=0.49\linewidth]{figures/12layers/hist_downstream_vs_layer_11_90deg_100GeV.png}
+    \includegraphics[width=0.49\linewidth]{figures/12layers/profile_downstream_vs_layer_11_90deg_100GeV.png}
   \end{adjustwidth}
   \redtext{Downstream} energy vs.\ energy in last layer
 \end{frame}
@@ -238,8 +230,8 @@
   \centering
   FCC-ee, $e^{-}$, \redtext{250 GeV}, $\theta = \pi/2$ \\[1.5ex]
   \begin{adjustwidth}{-9mm}{-9mm}
-    \includegraphics[width=0.49\linewidth]{figures/downstream/hist_downstream_vs_layer_7_90deg_250GeV.pdf}
-    \includegraphics[width=0.49\linewidth]{figures/downstream/profile_downstream_vs_layer_7_90deg_250GeV.pdf}
+    \includegraphics[width=0.49\linewidth]{figures/12layers/hist_downstream_vs_layer_11_91deg_250GeV.png}
+    \includegraphics[width=0.49\linewidth]{figures/12layers/profile_downstream_vs_layer_11_91deg_250GeV.png}
   \end{adjustwidth}
   \redtext{Downstream} energy vs.\ energy in last layer
 \end{frame}
@@ -257,24 +249,23 @@
 
   \redtext{Upstream} parametrization:
   \begin{equation*}
-  E_\text{upstream} = \upsilon_0 +
-                      \upsilon_1 \cdot E_\text{firstLayer}
+  E_\text{upstream} = \upsilon_0 + \upsilon_1 \cdot E_\text{firstLayer}
   \end{equation*}
   \begin{equation*}
     \upsilon_0 = a + b \cdot E_{cluster}  \qquad
-    \upsilon_1 = c + \frac{d}{\sqrt{E_{cluster}}}
+    \upsilon_1 = c + d \cdot E_{cluster}
   \end{equation*}
 
   \redtext{Downstream} parametrization:
   \begin{equation*}
   E_\text{downstream} = \delta_0 \quad + \quad
                         \delta_1 \cdot E_\text{lastLayer} \quad + \quad
-                        \delta_1 \cdot E_\text{lastLayer}^{2}
+                        \delta_2 \cdot E_\text{lastLayer}^{2}
   \end{equation*}
   \begin{equation*}
     \delta_0 = a + b \cdot E_{cluster}  \qquad
-    \delta_1 = c + \frac{d}{\sqrt{E_{cluster}}} \qquad
-    \delta_2 = e + \frac{f}{E_{cluster} - \redtext{g}}
+    \delta_1 = c + \frac{d}{E_{cluster}} \qquad
+    \delta_2 = e + \frac{f}{E_{cluster}}
   \end{equation*}
 \end{frame}
 
@@ -282,12 +273,12 @@
   \frametitle{FCC-ee Upstream Correction Energy Dependence}
 
   \begin{adjustwidth}{-9mm}{-9mm}
-    \includegraphics[width=0.49\linewidth]{figures/upstream/graph_upstream_p0.pdf}
-    \includegraphics[width=0.49\linewidth]{figures/upstream/graph_upstream_p1.pdf}\\[-3ex]
+    \includegraphics[width=0.49\linewidth]{figures/12layers/graph_upstream_upsilon_0.pdf}
+    \includegraphics[width=0.49\linewidth]{figures/12layers/graph_upstream_upsilon_1.pdf}\\[-3ex]
   \end{adjustwidth}
   \begin{equation*}
     \upsilon_0 = a + b \cdot E_{cluster}  \hspace{3cm}
-    \upsilon_1 = c + \frac{d}{\sqrt{E_{cluster}}}
+    \upsilon_1 = c + d \cdot E_{cluster}
   \end{equation*}
 \end{frame}
 
@@ -295,14 +286,14 @@
   \frametitle{FCC-ee Downstream Correction Energy Dependence}
 
   \begin{adjustwidth}{-9mm}{-9mm}
-    \includegraphics[width=0.32\linewidth]{figures/downstream/graph_downstream_p0.pdf}
-    \includegraphics[width=0.32\linewidth]{figures/downstream/graph_downstream_p1.pdf}
-    \includegraphics[width=0.32\linewidth]{figures/downstream/graph_downstream_p2.pdf}\\[-3ex]
+    \includegraphics[width=0.32\linewidth]{figures/12layers/graph_downstream_delta_0.pdf}
+    \includegraphics[width=0.32\linewidth]{figures/12layers/graph_downstream_delta_1.pdf}
+    \includegraphics[width=0.32\linewidth]{figures/12layers/graph_downstream_delta_2.pdf}\\[-3ex]
   \end{adjustwidth}
   \begin{equation*}
     \delta_0 = a + b \cdot E_{cluster}  \hspace{1.3cm}
-    \delta_1 = c + \frac{d}{\sqrt{E_{cluster}}} \hspace{1.3cm}
-    \delta_2 = e + \frac{f}{E_{cluster} - \redtext{g}}
+    \delta_1 = c + \frac{d}{E_{cluster}} \hspace{1.3cm}
+    \delta_2 = e + \frac{f}{E_{cluster}}
   \end{equation*}
 \end{frame}
 
@@ -314,36 +305,36 @@
   \frametitle{FCC-ee: Energy correction test I.}
 
   \centering
-  FCC-ee, $e^{-}$, \redtext{15 GeV}, $\theta = \pi/2$ \\[1.5ex]
+  FCC-ee, $e^{-}$, \redtext{15 GeV}, $\theta = \pi/2$ \hspace{8mm}
+  FCC-ee, $e^{-}$, \redtext{30 GeV}, $\theta = \pi/2$ \\[1.5ex]
   \begin{adjustwidth}{-9mm}{-9mm}
-    \includegraphics[width=0.49\linewidth]{figures/energy_corr/large_cryo__large_cryo_corr/sums_large_cryo__large_cryo_corr_90deg_15gev.pdf}
-    \includegraphics[width=0.49\linewidth]{figures/energy_corr/normal_cryo__large_cryo_corr/sums_normal_cryo__large_cryo_corr_90deg_15gev.pdf}
+    \includegraphics[width=0.49\linewidth]{figures/12layers/hist_energy_corr_validation_90deg_15GeV.pdf}
+    \includegraphics[width=0.49\linewidth]{figures/12layers/hist_energy_corr_validation_90deg_30GeV.pdf}
   \end{adjustwidth}
-  Large cryostat \hspace{4cm} Normal Cryostat
 \end{frame}
 
 \begin{frame}
   \frametitle{FCC-ee: Energy correction test II.}
 
   \centering
-  FCC-ee, $e^{-}$, \redtext{50 GeV}, $\theta = \pi/2$ \\[1.5ex]
+  FCC-ee, $e^{-}$, \redtext{50 GeV}, $\theta = \pi/2$ \hspace{8mm}
+  FCC-ee, $e^{-}$, \redtext{75 GeV}, $\theta = \pi/2$ \\[1.5ex]
   \begin{adjustwidth}{-9mm}{-9mm}
-    \includegraphics[width=0.49\linewidth]{figures/energy_corr/large_cryo__large_cryo_corr/sums_large_cryo__large_cryo_corr_90deg_50gev.pdf}
-    \includegraphics[width=0.49\linewidth]{figures/energy_corr/normal_cryo__large_cryo_corr/sums_normal_cryo__large_cryo_corr_90deg_50gev.pdf}
+    \includegraphics[width=0.49\linewidth]{figures/12layers/hist_energy_corr_validation_90deg_50GeV.pdf}
+    \includegraphics[width=0.49\linewidth]{figures/12layers/hist_energy_corr_validation_90deg_75GeV.pdf}
   \end{adjustwidth}
-  Large cryostat \hspace{4cm} Normal Cryostat
 \end{frame}
 
 \begin{frame}
   \frametitle{FCC-ee: Energy correction test III.}
 
   \centering
-  FCC-ee, $e^{-}$, \redtext{100 GeV}, $\theta = \pi/2$ \\[1.5ex]
+  FCC-ee, $e^{-}$, \redtext{200 GeV}, $\theta = \pi/2$ \hspace{5mm}
+  FCC-ee, $e^{-}$, \redtext{275 GeV}, $\theta = \pi/2$ \\[1.5ex]
   \begin{adjustwidth}{-9mm}{-9mm}
-    \includegraphics[width=0.49\linewidth]{figures/energy_corr/large_cryo__large_cryo_corr/sums_large_cryo__large_cryo_corr_90deg_100gev.pdf}
-    \includegraphics[width=0.49\linewidth]{figures/energy_corr/normal_cryo__large_cryo_corr/sums_normal_cryo__large_cryo_corr_90deg_100gev.pdf}
+    \includegraphics[width=0.49\linewidth]{figures/12layers/hist_energy_corr_validation_90deg_200GeV.pdf}
+    \includegraphics[width=0.49\linewidth]{figures/12layers/hist_energy_corr_validation_91deg_275GeV.pdf}
   \end{adjustwidth}
-  Large cryostat \hspace{4cm} Normal Cryostat
 \end{frame}
 
 \begin{frame}
@@ -351,21 +342,9 @@
 
   \centering
   \begin{adjustwidth}{-9mm}{-9mm}
-    \includegraphics[width=0.49\linewidth]{figures/energy_corr/normal_cryo__large_cryo_corr/summary_energy_normal_cryo__large_cryo_corr.pdf}
-    \includegraphics[width=0.49\linewidth]{figures/energy_corr/normal_cryo__large_cryo_corr/summary_res_normal_cryo__large_cryo_corr.pdf}
+    \includegraphics[width=0.49\linewidth]{figures/12layers/graph_validate_energy.pdf}
+    \includegraphics[width=0.49\linewidth]{figures/12layers/graph_validate_resolution.pdf}
   \end{adjustwidth}
-  Normal Cryostat
-\end{frame}
-
-\begin{frame}
-  \frametitle{FCC-ee: Energy correction test V.}
-
-  \centering
-  \begin{adjustwidth}{-9mm}{-9mm}
-    \includegraphics[width=0.49\linewidth]{figures/energy_corr/large_cryo__large_cryo_corr/summary_energy_large_cryo__large_cryo_corr.pdf}
-    \includegraphics[width=0.49\linewidth]{figures/energy_corr/large_cryo__large_cryo_corr/summary_res_large_cryo__large_cryo_corr.pdf}
-  \end{adjustwidth}
-  Large cryostat
 \end{frame}
 
 
@@ -382,12 +361,19 @@
     \item \redtext{Upstream} energy vs.\ energy in first layer \redtext{linear}
     \item \redtext{Downstream} energy vs.\ energy in last layer
           \redtext{quadratic}
-    \item Energy correction overshoots low energies and undershoots high
-          energies
+    \item Transfered calculation to HTCondor
+    \item Parametrization can use any basic ROOT function
+    \item Energy correction reconstructs cluster energy in whole range
     \item Investigate enlarged calorimeter (in terms of $X_{0}$)
-    \item Investigate $\theta$ dependence --- both up.\ and downstream
-          corrections
-    \item Transfer to more powerful computer/cluster (employ HTCondor)
+    \item Investigate $\theta$ dependence
+    \item \bluetext{\bf Links:}
+          \begin{itemize}
+            \item \href{https://github.com/kjvbrt/FCCSW/tree/calo_corr}
+                  {\footnotesize \bluetext{\texttt{calo\_corr}: https://github.com/kjvbrt/FCCSW/tree/calo\_corr}}
+            \item {\footnotesize \bluetext{Correction lives in: \texttt{Detector/DetStudies/scripts}}}
+            \item \href{https://github.com/kjvbrt/FCCSW/tree/calo_corr_12}
+                  {\scriptsize \bluetext{\texttt{calo\_corr\_12}: https://github.com/kjvbrt/FCCSW/tree/calo\_corr\_12}}
+          \end{itemize}
   \end{itemize}
 \end{frame}
 
