@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[aspectratio=169]{beamer}
 \usepackage{booktabs}
 \usepackage{xcolor}
 \usepackage{changepage}
@@ -23,7 +23,7 @@
 \definecolor{myBlue}{RGB}{21, 56, 110}
 \definecolor{myRed}{RGB}{174,0,34}
 \definecolor{myRedBg}{RGB}{251, 217, 224}
-\definecolor{greySAV}{RGB}{167,166,166}
+\definecolor{greySAS}{RGB}{167,166,166}
 \definecolor{greyCU}{RGB}{44,46,53}
 
 \setbeamercolor{title}{fg=myBlue}
@@ -58,22 +58,18 @@
 
 
 % Title
-\title[FCCcalo]{Noble Liquid Calorimetry for Future Circular Collider}
-\author[Smiesko, Faltova]{Jana~Faltová\inst{1},
-                          \underline{Juraj~Smieško}\inst{1,2}}
+\title[FCCcalo]{Calorimetry for Future Circular Collider}
+\author[Faltova, Smiesko]{Jana~Faltov\'{a}\inst{1}, Juraj~Smie\v{s}ko\inst{1,2}}
 \institute[CU, SAS]{\inst{1} Charles University, Czechia \\
                     \inst{2} Slovak Academy of Sciences, Slovakia}
-\date[2020-Dec-03]{\footnotesize UNCE Seminar, Prague \\
-                   December 03, 2020 \\
-                   \tiny Based on presentations at
-                   \href{https://indico.cern.ch/event/932973/}
-                        {4th FCC Physics and Experiments Workshop}\\
-                        \includegraphics[width=0.6\linewidth]{figures/logolink_OP_VVV_hor_barva_eng.jpg}}
+\date[2021-May-19]{\footnotesize
+                   IPNP Seminar, Prague \\
+                   19 May 2020}
+\titlegraphic{\vspace{6.1cm}\centering\includegraphics[width=0.6\linewidth]{figures/logolink_OP_VVV_hor_barva_eng.jpg}}
 
-                   % (Ab urbe condita 2773)}
-
-
-% ---------------------------------------------------------------------------- %
+%
+% -----------------------------------------------------------------------------
+%
 \begin{document}
 
 {%
@@ -92,14 +88,15 @@
 \end{frame}
 
 
-% \begin{frame}
-%   \frametitle{Overview}
+\begin{frame}
+  \frametitle{Overview}
+
+  \tableofcontents
+\end{frame}
+
 %
-%   \tableofcontents
-% \end{frame}
-
-
-% ---------------------------------------------------------------------------- %
+% -----------------------------------------------------------------------------
+%
 \section{Future Circular Collider}
 
 \begin{frame}
@@ -107,8 +104,7 @@
 
   \begin{columns}[c]
     \column{.6\textwidth}
-    \includegraphics[width=\linewidth]{figures/FCC_CLIC.png}
-    \vspace{-10mm}
+    \includegraphics[width=0.7\linewidth]{figures/FCC_CLIC.png}\\[-1mm]
     \tiny{Image: \href{https://alumni.cern/news/226282}{CERN}}
 
     \column{.4\textwidth}
@@ -176,8 +172,9 @@
   \end{columns}
 \end{frame}
 
-
-% ---------------------------------------------------------------------------- %
+%
+% -----------------------------------------------------------------------------
+%
 \section{FCC Detectors}
 
 \begin{frame}
@@ -295,8 +292,9 @@
   \end{columns}
 \end{frame}
 
-
-% ---------------------------------------------------------------------------- %
+%
+% -----------------------------------------------------------------------------
+%
 \section{FCC Calorimetry}
 
 \begin{frame}
@@ -395,8 +393,9 @@
   \end{columns}
 \end{frame}
 
-
-% ---------------------------------------------------------------------------- %
+%
+% -----------------------------------------------------------------------------
+%
 \section{Noble Liquid (LAr) Calorimetery}
 
 \begin{frame}
@@ -455,8 +454,9 @@
   \hspace{6em}FCC-hh\hspace{11em}FCC-ee
 \end{frame}
 
-
-% ---------------------------------------------------------------------------- %
+%
+% -----------------------------------------------------------------------------
+%
 \section{Conclusions and Plans}
 
 \begin{frame}
@@ -473,6 +473,9 @@
   \end{itemize}
 \end{frame}
 
+%
+% -----------------------------------------------------------------------------
+%
 \appendix
 \backupbegin{}
 
