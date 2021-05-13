@@ -401,6 +401,104 @@ Building on and reusing CERN’s existing infrastructures\\
   \end{columns}
 \end{frame}
 
+\begin{frame}
+  \frametitle{FCC-ee: IDEA Detector}
+
+  \begin{columns}[c]
+    \column{.6\textwidth}
+    \begin{center}
+      \includegraphics[width=\linewidth]{figures/FCC_ee_IDEA.png}
+    \end{center}
+
+    \column{.4\textwidth}
+    \begin{itemize}
+      \item New, innovative, possibly more cost-effective design
+      \item Silicon vertex detector
+      \item Short-drift, ultra-light wire chamber
+      \item Dual-readout calorimeter
+      \item Thin and light solenoid coil inside calorimeter system
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+
+%
+% -----------------------------------------------------------------------------
+%
+\section{Noble Liquid Calorimetry for FCC-ee}
+
+\begin{frame}
+  \frametitle{FCC-ee Calorimetry}
+
+  \vspace{2ex}
+  \begin{columns}[c]
+    \column{.5\textwidth}
+    \bluetext{Requirements:}
+    \begin{itemize}
+      \item Jet-jet inv.\ mass resolution to resolve $W$ from $Z$
+            \begin{itemize}
+              \item requires $\sim 3$\% ($\sim 30\% / \sqrt{E}$\,)
+            \end{itemize}
+      \item EM resolution at minimum 15\% to sustain jet resolution\\[-0.4ex]
+            \begin{itemize}
+              \item $B_\text{S} \rightarrow D_\text{S}K$ requires $\sim 5$\%
+            \end{itemize}
+      \item Crystal and LAr --- good EM resolution
+      \item CALICE and Dual Readout --- good jet resolution
+    \end{itemize}
+
+    \column{.5\textwidth}
+    \bluetext{Energy resolution param.:}
+    \[ \frac{\sigma_\text{E}}{\langle E\,\rangle} = \frac{a}{\sqrt{E\,}} \oplus
+                                                    \frac{b}{E} \oplus c \]
+
+    \bluetext{Typical values:}
+    \begin{center}
+      \small
+      \begin{tabular}{lcc}
+        Technology   & $a$~[\%] & $c$~[\%] \\
+        \midrule
+        CALICE       & 15       & 1 \\
+        Dual Readout & 10       & 1 \\
+        LAr          & 9        & --- \\
+        Crystal      & 3--5     & 0.5 \\
+      \end{tabular}
+    \end{center}
+  \end{columns}
+
+  \vspace{1ex}
+  \redtext{High granularity and Particle Flow needed to achieve energy
+           resolution of 3\%}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Noble Liquid Calorimetry for FCC-ee}
+
+  \begin{columns}[c]
+    \column{.5\textwidth}
+    \bluetext{Key features:}
+    \begin{itemize}
+      \item Tested technology in ATLAS, D\O, H1, NA31/48/62
+      \item Radiation hardness, long term stability
+      \item Linear response, uniformity, high control over systematics
+      \item Good energy and timing resolution
+      \item Less than $10\%/\sqrt{E}$ demonstrated
+    \end{itemize}
+
+    \column{.5\textwidth}
+    \begin{center}
+      \includegraphics[width=.6\linewidth]{figures/FCC_hh_LAr_electron_performance_mu.pdf}
+      \includegraphics[width=.6\linewidth]{figures/FCC_hh_LAr_pion_performance.pdf}
+    \end{center}
+  \end{columns}
+\end{frame}
+
+
+%
+% -----------------------------------------------------------------------------
+%
+\section{Other Calorimeter Types}
 
 \begin{frame}
   \frametitle{CALICE}
@@ -437,27 +535,6 @@ Building on and reusing CERN’s existing infrastructures\\
     \hspace{7mm}
     \includegraphics[width=0.41\linewidth]{figures/CLD_photon_performance.png}
   \end{center}
-\end{frame}
-
-
-\begin{frame}
-  \frametitle{FCC-ee: IDEA Detector}
-
-  \begin{columns}[c]
-    \column{.6\textwidth}
-    \begin{center}
-      \includegraphics[width=\linewidth]{figures/FCC_ee_IDEA.png}
-    \end{center}
-
-    \column{.4\textwidth}
-    \begin{itemize}
-      \item New, innovative, possibly more cost-effective design
-      \item Silicon vertex detector
-      \item Short-drift, ultra-light wire chamber
-      \item Dual-readout calorimeter
-      \item Thin and light solenoid coil inside calorimeter system
-    \end{itemize}
-  \end{columns}
 \end{frame}
 
 
@@ -507,53 +584,53 @@ Building on and reusing CERN’s existing infrastructures\\
   \end{columns}
 \end{frame}
 
-%
-% -----------------------------------------------------------------------------
-%
-\section{FCC Calorimetry}
 
 \begin{frame}
-  \frametitle{FCC-ee Calorimetry}
+  \frametitle{Crystal Calorimeters}
 
-  \vspace{2ex}
   \begin{columns}[c]
     \column{.5\textwidth}
-    \bluetext{Requirements:}
+    \bluetext{Traits:}
     \begin{itemize}
-      \item Jet-jet inv.\ mass resolution to resolve $W$ from $Z$
-            \begin{itemize}
-              \item requires $\sim 3$\% ($\sim 30\% / \sqrt{E}$\,)
-            \end{itemize}
-      \item EM resolution at minimum 15\% to sustain jet resolution\\[-0.4ex]
-            \begin{itemize}
-              \item $B_\text{S} \rightarrow D_\text{S}K$ requires $\sim 5$\%
-            \end{itemize}
-      \item Crystal and LAr for good EM resolution
-      \item CALICE and Dual Readout good jet resolution
+      \item Mostly investigated for CEPC
+      \item Used by CMS
+      \item Homogeneous structure
+      \item Has optimal intrinsic energy resolution:
+            $\sim 3\%/\sqrt{E\,} \, \oplus \sim 1\%$
     \end{itemize}
 
     \column{.5\textwidth}
-    \bluetext{Energy resolution param.:}
-    \[ \frac{\sigma_\text{E}}{\langle E\,\rangle} = \frac{a}{\sqrt{E\,}} \oplus
-                                                    \frac{b}{E} \oplus c \]
-
-    \bluetext{Typical values:}
     \begin{center}
-      \small
-      \begin{tabular}{lcc}
-        Technology   & $a$~[\%] & $c$~[\%] \\
-        \midrule
-        CALICE       & 15       & 1 \\
-        Dual Readout & 10       & 1 \\
-        LAr          & 9        & --- \\
-        Crystal      & 3--5     & 0.5 \\
-      \end{tabular}
+      \includegraphics[width=\linewidth]{figures/CEPC_crystal_calo_design1.png}%
+      \vspace{2ex}
+      \includegraphics[width=\linewidth]{figures/CEPC_crystal_calo_design2.png}
     \end{center}
   \end{columns}
+\end{frame}
 
-  \vspace{1ex}
-  \redtext{High granularity and Particle Flow needed to achieve energy
-           resolution of 3\%}
+
+%
+% -----------------------------------------------------------------------------
+%
+\section{Improvements in Noble-liquid for FCC-ee}
+
+\begin{frame}
+  \frametitle{Improvements in Noble Liquid Calorimetry}
+
+  \begin{itemize}
+    \item Noble liquid is viable technology for FCC-ee detectors
+    \item New round of optimizations started with multiple R\&D projects
+    \item Both hardware and software improvements are required to get to 3\%
+    \item Design driven by Particle Flow
+  \end{itemize}
+
+  \vspace{-1.5em}
+  \begin{center}
+    \includegraphics[align=c,width=0.47\linewidth]{figures/FCC_hh_LAr_diagram.png}%
+    \hfill
+    \includegraphics[align=c,width=0.47\linewidth]{figures/FCC_ee_LAr_diagram.png}\\[.5em]
+    FCC-hh \hspace{16em} FCC-ee
+  \end{center}
 \end{frame}
 
 
@@ -584,37 +661,8 @@ Building on and reusing CERN’s existing infrastructures\\
 
 \end{frame}
 
-
 \begin{frame}
-  \frametitle{Crystal Calorimeters}
-
-  \begin{columns}[c]
-    \column{.5\textwidth}
-    \bluetext{Traits:}
-    \begin{itemize}
-      \item Mostly investigated for CEPC
-      \item Used by CMS
-      \item Homogeneous structure
-      \item Has optimal intrinsic energy resolution:
-            $\sim 3\%/\sqrt{E\,} \, \oplus \sim 1\%$
-    \end{itemize}
-
-    \column{.5\textwidth}
-    \begin{center}
-      \includegraphics[width=\linewidth]{figures/CEPC_crystal_calo_design1.png}%
-      \vspace{2ex}
-      \includegraphics[width=\linewidth]{figures/CEPC_crystal_calo_design2.png}
-    \end{center}
-  \end{columns}
-\end{frame}
-
-%
-% -----------------------------------------------------------------------------
-%
-\section{Noble Liquid (LAr) Calorimetery}
-
-\begin{frame}
-  \frametitle{Noble Liquid (LAr) Calorimetry I}
+  \frametitle{Hardware Improvements}
 
   \begin{columns}[c]
     \column{.5\textwidth}
@@ -652,7 +700,13 @@ Building on and reusing CERN’s existing infrastructures\\
 
 
 \begin{frame}
-  \frametitle{Noble Liquid (LAr) Calorimetry II}
+  \frametitle{Improvements for FCC-ee}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Hardware Improvements for FCC-ee}
 
   \begin{itemize}
     \item Optimization using FCCSW will be performed
@@ -662,16 +716,37 @@ Building on and reusing CERN’s existing infrastructures\\
             \item Active material (Krypton, \dots)
             \item Absorber material (Tungsten, \dots)
           \end{itemize}
-    \item Multiple R\&D projects directed at LAr at FCC-ee
   \end{itemize}
 
-  \vspace{-4ex}
-  \begin{center}
-    \includegraphics[align=c,width=0.4\linewidth]{figures/FCC_hh_LAr_diagram.png}%
-    \hfill
-    \includegraphics[align=c,width=0.4\linewidth]{figures/FCC_ee_LAr_diagram.png}\\[.5em]
-    FCC-hh \hspace{18em} FCC-ee
-  \end{center}
+  \begin{itemize}
+    \item High density feedthroughs for signal out of the calorimeter
+    \item High granularity electrodes
+    \item Detector geometry
+    \item Minimizing material budget
+    \item High rate mitigation
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Software Improvements for FCC-ee}
+
+  \begin{columns}[c]
+    \column{.6\textwidth}
+    \begin{itemize}
+      \item New generic framework Key4HEP emerges from the FCCSW and iLCSoft
+      \item Based on Gaudí but uses Podio
+      \item Integrates tools from simulation, detector description to
+            reconstruction
+      \item Integration of Particle Flow algorithm (Pandora SDK)
+      \item Reimplementation of clustering algorithm (CLUE)
+      \item Replacement of ECal in CLD or IDEA by LAr calorimeter
+    \end{itemize}
+
+    \column{.4\textwidth}
+    \begin{center}
+      \includegraphics[width=.7\linewidth]{figures/pandora_example.pdf}
+    \end{center}
+  \end{columns}
 \end{frame}
 
 %
