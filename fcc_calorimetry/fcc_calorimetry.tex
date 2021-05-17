@@ -720,69 +720,86 @@ Building on and reusing CERN’s existing infrastructures\\
 \end{frame}
 
 \begin{frame}
-  \frametitle{Hardware Improvements}
+  \frametitle{Hardware Improvements FCC-ee I}
 
   \begin{columns}[c]
     \column{.5\textwidth}
-    \begin{itemize}
-      \item Tested technology in ATLAS
-      \item Less than $10\%/\sqrt{E}$ demonstrated
-    \end{itemize}
 
-    \bluetext{Improvements for FCC-ee}
+    \bluetext{Higher granularity:}
     \begin{itemize}
-      \item Higher granularity
-            \begin{itemize}
-              \item Transverse and in depth
-              \item More signal traces
-            \end{itemize}
-      \item Improve EM resolution
-            \begin{itemize}
-              \item Higher sampling fraction $\rightarrow$ thicker detector
-            \end{itemize}
-      \item Low energy photons \\
-            (bellow 300 MeV)
-            \begin{itemize}
-              \item Low mass cryostat
-              \item Smaller noise term
-            \end{itemize}
+      \item Both transverse and in depth
+      \item Factor of 10x in comparison to ATLAS LAr (220k $\rightarrow$ ~2M
+            cells)
+      \item Using simpler design --- PCBs
+      \item Signal traces are embedded in PCB
+      \item More signal traces $\rightarrow$ more noise
+      \item High longitudinal segmentation mitigates gap widening towards high
+            radius
+      \item More signal traces $\rightarrow$ high density feedthroughs
     \end{itemize}
 
     \column{.5\textwidth}
+
     \begin{center}
-      \includegraphics[width=.6\linewidth]{figures/FCC_hh_LAr_electron_performance_mu.pdf}
-      \includegraphics[width=.6\linewidth]{figures/FCC_hh_LAr_pion_performance.pdf}
+      \includegraphics[width=\linewidth]{figures/fcc-lar-electrodes.png}\\[1em]
+      \includegraphics[width=\linewidth]{figures/fcc-lar-feedthroughs.png}
     \end{center}
   \end{columns}
 \end{frame}
 
 
 \begin{frame}
-  \frametitle{Improvements for FCC-ee}
+  \frametitle{Hardware Improvements for FCC-ee II}
 
+  \begin{columns}[c]
+    \column{.5\textwidth}
+
+    \bluetext{Cryostat vessel:}
+    \begin{itemize}
+      \item Important for low energy particle measurements (bellow 300 MeV)
+      \item Carbon fiber reinforced cryostat under investigation
+      \item Vacuum vessel shared between solenoid and calorimeter
+    \end{itemize}
+    \bluetext{Electronics:}
+    \begin{itemize}
+      \item Warm or Cold electronics
+      \item Charge or current pre-amplifiers
+      \item Dynamic range: 14--16 bits
+      \item Time resolution optimization
+    \end{itemize}
+
+    \column{.5\textwidth}
+
+    \begin{center}
+      \includegraphics[width=0.7\linewidth]{figures/protodune-electronics.png}\\[0.5em]
+      \includegraphics[width=0.9\linewidth]{figures/nasa-cryotank.jpg}
+    \end{center}
+  \end{columns}
 \end{frame}
 
 
 \begin{frame}
-  \frametitle{Hardware Improvements for FCC-ee}
+  \frametitle{Hardware Improvements for FCC-ee III}
 
-  \begin{itemize}
-    \item Optimization using FCCSW will be performed
-          \begin{itemize}
-            \item $22 X_0$, $7\lambda_\text{I}$ sufficient
-            \item Granularity, sampling frequency, sampling fraction
-            \item Active material (Krypton, \dots)
-            \item Absorber material (Tungsten, \dots)
-          \end{itemize}
-  \end{itemize}
+  \begin{columns}[c]
+    \column{.5\textwidth}
 
-  \begin{itemize}
-    \item High density feedthroughs for signal out of the calorimeter
-    \item High granularity electrodes
-    \item Detector geometry
-    \item Minimizing material budget
-    \item High rate mitigation
-  \end{itemize}
+    \bluetext{Material \& Construction}
+    \begin{itemize}
+      \item Alignment and uniformity affects constant term
+      \item Active material (Krypton, \dots)
+      \item Absorber material (Tungsten, \dots)
+      \item Absorber and sensitive gap thickness
+      \item Plate inclination, layer depths, cell merging
+      \item Interplay between sub-systems
+    \end{itemize}
+
+    \column{.5\textwidth}
+
+    \begin{center}
+      \includegraphics[width=0.7\linewidth]{figures/fcc-lar-segmentation.png}
+    \end{center}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
