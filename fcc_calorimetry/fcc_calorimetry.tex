@@ -112,8 +112,8 @@
     \column{.4\textwidth}
     \bluetext{Large Hadron Collider at CERN}
     \begin{itemize}
-    \item LHC (2008--2024)
-    \item HL-LHL (2027--2040)
+    \item LHC (2008--2024): 8--13 TeV, 400 fb$^{-1}$
+    \item HL-LHL (2027--2040): 14 TeV, 4000 fb$^{-1}$
     \end{itemize}
 
     \column{.6\textwidth}
@@ -145,19 +145,21 @@
      \column{.7\textwidth}
      \only<1->{
        \begin{itemize}
-       \item Are you interested in High Energy Physics (HEP)?
        \item Do you support HEP in 20 years from now?
        \item Would you like to measure your favourite channel with new detector?
-       \item Do you have in mind a measurement that LHC is not precise or powerful enough?
+       \item Do you have in mind a measurement that LHC is not enough precise?
        \item Are you interested in hardware?
        \end{itemize}
      }
-     \only<2>{
+     \only<2->{
        \vspace{2ex}
-       \bluetext{\bf Have you have answered at least twice ``YES''?}\\
-       {\bf $\rightarrow$ Join us!}\\
+       \bluetext{If you have you have answered at least once ``YES'', you're certainly interested in the topic of this talk!}\\
+     }
+     \only<3>{
        \vspace{2ex}
-       }
+       \bluetext{\bf If your interest still remains after the talk, do not hesitate to contact us :)}\\
+     }
+     
      
      \column{.3\textwidth}
      \only<1->{
@@ -165,7 +167,7 @@
          \includegraphics[width=0.5\linewidth]{figures/question.png}\\
        \end{center}
      }
-       \only<2>{
+       \only<3>{
        \begin{center}
          \includegraphics[width=0.8\linewidth]{figures/weWantYou.png}\\
        \end{center}
@@ -173,18 +175,55 @@
   \end{columns}
 
 \end{frame}  
-  
+
 \begin{frame}
-  \frametitle{Why do we need new electron positron colliders?}
-  \bluetext{{\bf Very precise measurements of the electroweak sector as a hint of new physics}}\\
+  \frametitle{Why do we need new hadron collider?}
   
+  \only<1->{
+    \begin{columns}[c]
+    \column{.6\textwidth}
+       \bluetext{{\bf Hadron collider as a discovery machine}}\\
+       \vspace{2ex}
+      \bluetext{Open questions}
+      \begin{itemize}
+      \item Dark matter
+      \item Matter-antimatter symmetry
+      \item Neutrino masses
+      \item ...
+      \end{itemize}
+    }
+    \only<2>{
+      \bluetext{Hadron collider can give answers if}
+      \begin{itemize}
+      \item Mass of new particles is in its reach
+      \item The detectors are sensitive enough
+      \end{itemize} 
+   
+    \column{.4\textwidth}
+    \includegraphics[width=1.0\linewidth]{figures/zprime-search-fcchh.png}\\
+      \tiny{Image: \href{https://cds.cern.ch/record/2651300?ln=en}{FCC-hh CDR}}
+    }
+  \end{columns}  
+  
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Why do we need new lepton collider?}
+
+  \only<1->{
+  \bluetext{{\bf Very precise measurements of the electroweak sector as a hint of new physics}}\\
   \vspace{2ex}
+  }
+  \only<2->{
   \bluetext{Highlights from the physics programme}
     \begin{itemize}
       \item Higgs boson couplings
       \item Top quark and Higgs boson masses
       \item Flavour physics ($b$, $c$, $\tau$)
     \end{itemize}
+  }
+  \only<3>{ 
   \bluetext{Advantages of $e^+e^-$ colliders}
      \begin{itemize}
      \item Clean environment $\rightarrow$ measurements of unprecedented precision\\
@@ -192,38 +231,13 @@
      \item Higgs factories provides model-independent measurements
      \item We can starting building the collider (almost) now
      \end {itemize}
-    
+   }
 \end{frame}
 
 \begin{frame}
-  \frametitle{Electron positron colliders as a Higgs factory}
-  
- \begin{columns}[c]  
-   \column{.45\textwidth}
-   \bluetext{Number of $Z$ bosons} 
-   \begin{itemize}
-   \item LEP: $10^7$
-   \item FCCee: $5 . 10^{12}$
-   \end{itemize}
+  \frametitle{Lepton colliders at the market}
 
- \bluetext{Estimation of the number of $H$ bosons} 
-  \begin{itemize}
-  \item LHC:
-  \item HL-LHC:
-  \item FCCee: $10^6$
-  \item FCChh:
-  \end{itemize}
-
-  \column{.55\textwidth}
-  \includegraphics[width=0.8\linewidth]{figures/FCC_ee_operation_plan.png}
-
- \end{columns}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Electron positron colliders at the market}
-
-   \begin{columns}[c]
+  \begin{columns}[c]
     \column{.7\textwidth}
     \bluetext{Linear Colliders}
     \begin{itemize}
@@ -235,25 +249,28 @@
      \item FCC (Future Circular Collider, CERN)
      \item CEPC (Circular Electron Positron Collider, China)
      \end {itemize}
-    
+  
     \column{.3\textwidth}
     \includegraphics[width=0.4\linewidth]{figures/ilc_logo_400x400.jpg}\\
     \vspace*{-0.5cm}\hspace*{2cm}\includegraphics[width=0.4\linewidth]{figures/CLIC-Logo-Color-72_3_0.png}\\
     \includegraphics[width=0.6\linewidth]{figures/fcc_logo.jpg}\\
     \vspace*{-0.1cm}\hspace*{1.5cm}\includegraphics[width=0.6\linewidth]{figures/cepc-logo.png}\\
-   
    \end{columns}
 \end{frame}
 
 \begin{frame}
   \frametitle{Circular vs linear colliders}
 
-  \centering
-   \includegraphics[width=0.5\linewidth]{figures/Luminosity_vs_energy.png}\\
+  \only<1->{
+  \begin{center}
+    \includegraphics[width=0.4\linewidth]{figures/Luminosity_vs_energy_v1.png}\\
+     \tiny{Image: \href{https://cds.cern.ch/record/2651299?ln=en}{FCC-ee CDR}}
+  \end{center}
+   \vspace{1ex}
+  }
 
-   \vspace{3ex}
-
-   \begin{columns}[c]
+  \begin{columns}
+     \only<2->{
      \column{.4\textwidth}
      \bluetext{Linear colliders}
      \begin{itemize}
@@ -261,7 +278,8 @@
      \item No synchrotron radiation, large beamstrahlung
      \item Beams not reusable
      \end{itemize}
-
+     }
+     \only<3>{
      \column{.5\textwidth} 
      \bluetext{Circular colliders}
      \begin{itemize}
@@ -270,27 +288,37 @@
      \item Circulating beams
      \item Synergy with future $pp$ collider
      \end{itemize}
+     }
    \end{columns}
 \end{frame}
 
 \begin{frame}
   \frametitle{Higgs factories: Higgs coupling}
+  \only<1->{
   \begin{center}  
     \includegraphics[width=0.85\linewidth]{figures/kappa.png}\\
+    \tiny{Image: \href{https://arxiv.org/abs/1905.03764}{arXiv:1905.03764}}
   \end{center}
+  }
+  \only<2>{
   %\small{
   Factor 2--10 improvement with $e^+e^-$ colliders wrt HL-LHC\\
   Comparable sensitivities in initial stages of $e^+e^-$ colliders (factor of 2 max)
-   %}
+  %}
+  }
 \end{frame}
 
 \begin{frame}
   \frametitle{Higgs factories: Higgs self-coupling}
-  \centering
-  \includegraphics[width=0.6\linewidth]{figures/higgs_selfCoupling.png}\\
-  
-  \bluetext{A Higgs factory is needed (BR untagged w/o assumptions!), even if the ultimate goal is the hadron-hadron collider}
-
+  \only<1->{
+  \begin{center}
+    \includegraphics[width=0.6\linewidth]{figures/higgs_selfCoupling.png}\\
+    \tiny{Image: \href{https://arxiv.org/abs/1905.03764}{arXiv:1905.03764}}
+  \end{center}
+  }
+  \only<2>{
+  A Higgs factory is needed (BR untagged w/o assumptions!), even if the ultimate goal is the hadron-hadron collider.\\
+  }
 \end{frame}
 
 \begin{frame}
@@ -329,10 +357,18 @@ Building on and reusing CERN’s existing infrastructures\\
   \begin{columns}[c]
      \column{.5\textwidth}
      \includegraphics[width=0.8\linewidth]{figures/FCC_ee_ring.png}\\
-     TODO: Something else?
+     Double ring $e^+e^-$ collider (100 km)\\
+     Asymmetric IR layout \& optics to limit synchrotron radiation\\
      \column{.5\textwidth}
-     \includegraphics[width=0.8\linewidth]{figures/FCC_ee_operation_plan.png}\\
-     Four working points (88--95 GeV, 158--162 GeV, 240 GeV, 345--365 GeV)\\
+     
+     \begin{center}
+       {\footnotesize\hspace{3.3em}88--95
+                  \hspace{0.2em}\textcolor{blue}{158--162}
+                  \hspace{0.2em}\textcolor{red}{240
+                  }\hspace{1.9em}\textcolor{green}{345--365} GeV}
+      \includegraphics[width=.85\linewidth]{figures/FCC_ee_operation_plan.png}
+     \end{center}
+     Four working points\\
      $10^5 \times$ more $Z$ bosons compared to LEP\\
   \end{columns}
 \end{frame}
@@ -344,6 +380,28 @@ Building on and reusing CERN’s existing infrastructures\\
 
 \begin{frame}
     \frametitle{FCC-ee: Key technologies}
+   \begin{columns}[c]
+   \only<1->{
+   \column{.5\textwidth}
+   \begin{center}
+       \includegraphics[width=0.6\linewidth]{figures/vacuumArc.png}\\
+   \end{center}  
+     FCC-ee complete vacuum arc half-cell mock up\\
+     \small{
+     including girder, vacuum system with antechamber + pumps,
+     dipole, quadrupole + sext. magnets, BPMs, cooling + alignment
+     systems, technical infrastructure interfaces}
+   }
+   \only<2>{
+   \column{.5\textwidth}
+     \begin{center}
+         \includegraphics[width=0.35\linewidth]{figures/srfCavities.png}\\
+     \end{center}
+     400 MHz SRF cryomodule\\
+     Prototype multi-cell cavities for FCC $ZH$ operation\\
+     High-efficiency RF power sources\\
+    }
+ \end{columns}   
     
 \end{frame}
 
@@ -353,17 +411,17 @@ Building on and reusing CERN’s existing infrastructures\\
     \column{.4\textwidth}
      \includegraphics[width=1.0\linewidth]{figures/FCC_hh_ring.pdf}\\
      
-    \column{.6\textwidth}
+     \column{.6\textwidth}
       \bluetext{Order of magnitude increase wrt HL-LHC}
       \begin{itemize}
       \item Centre of mass energy: 14 TeV $\rightarrow$ 100 TeV
-      \item Total integrated luminosity: 3 ab$^{-1} \rightarrow$ 20 ab$^{-1}$
+      \item Total integrated luminosity: 4 ab$^{-1} \rightarrow$ 20 ab$^{-1}$
       \end{itemize}
       
       \bluetext{Key technology: 16 T dipole magnets}
-      \vspace{1ex}
+      %\vspace{1ex}
       \begin{center}
-        \includegraphics[width=.5\linewidth]{figures/fermilab-magnets-newdipole-small.jpg}\\
+        \includegraphics[width=.45\linewidth]{figures/fermilab-magnets-newdipole-small.jpg}\\
          {\small{Fermilab: Prototype of 14.1 T Nb$_3$Sn dipole magnet}}
        \end{center}     
    \end{columns}
