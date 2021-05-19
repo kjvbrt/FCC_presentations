@@ -5,6 +5,7 @@
 \usepackage[export]{adjustbox}
 \usepackage{booktabs}
 \usepackage{graphbox}
+\usepackage[absolute,overlay]{textpos}
 
 \usetheme[numbering=fraction,progressbar=frametitle]{metropolis}
 
@@ -125,21 +126,20 @@
   \end{columns}
   \pause%
 
-  \vspace{1ex}
-  \bluetext{If you answered at least once ``YES'', you're certainly\\ interested
-            in the topic of this talk!}
-  \pause%
-
-  \vspace{-3ex}
   \begin{columns}
     \column{.7\textwidth}
+
+    \bluetext{If you answered at least once ``YES'', you're certainly
+              interested in the topic of this talk!}
+    \vspace{1em}
+    \pause%
 
     \bluetext{\bf If your interest still remains after the talk, do not
               hesitate to contact us :)}
 
     \column{.3\textwidth}
 
-    \vspace{-3ex}
+    \vspace{-2em}
     \begin{center}
       \includegraphics[width=0.8\linewidth]{figures/weWantYou.png}\\
     \end{center}
@@ -470,6 +470,12 @@ Building on and reusing CERN’s existing infrastructures\\
       \item Proved concept, understood performance
     \end{itemize}
   \end{columns}
+
+  \begin{textblock*}{\paperwidth}(4pt, 1.1\textheight)
+    \tiny source:
+    \href{https://indico.cern.ch/event/932973/}
+         {4th FCC Physics and Experiments Workshop}
+  \end{textblock*}
 \end{frame}
 
 \begin{frame}
@@ -490,6 +496,12 @@ Building on and reusing CERN’s existing infrastructures\\
       \item Thin and light solenoid coil inside calorimeter system
     \end{itemize}
   \end{columns}
+
+  \begin{textblock*}{\paperwidth}(4pt, 1.1\textheight)
+    \tiny source:
+    \href{https://indico.cern.ch/event/932973/}
+         {4th FCC Physics and Experiments Workshop}
+  \end{textblock*}
 \end{frame}
 
 
@@ -563,6 +575,12 @@ Building on and reusing CERN’s existing infrastructures\\
       \includegraphics[width=.6\linewidth]{figures/FCC_hh_LAr_pion_performance.pdf}
     \end{center}
   \end{columns}
+
+  \begin{textblock*}{\paperwidth}(4pt, 1.1\textheight)
+    \tiny arXiv:
+    \href{https://arxiv.org/abs/1912.09962}
+         {1912.09962}
+  \end{textblock*}
 \end{frame}
 
 
@@ -583,6 +601,12 @@ Building on and reusing CERN’s existing infrastructures\\
     \column{.6\textwidth}
     \includegraphics[width=\linewidth]{figures/CALICE_diagram.png}
   \end{columns}
+
+  \begin{textblock*}{\paperwidth}(4pt, 1.1\textheight)
+    \tiny source:
+    \href{https://indico.cern.ch/event/932973/}
+         {4th FCC Physics and Experiments Workshop}
+  \end{textblock*}
 \end{frame}
 
 
@@ -601,6 +625,12 @@ Building on and reusing CERN’s existing infrastructures\\
     \hspace{7mm}
     \includegraphics[width=0.41\linewidth]{figures/CLD_photon_performance.png}
   \end{center}
+
+  \begin{textblock*}{\paperwidth}(4pt, 1.1\textheight)
+    \tiny source:
+    \href{https://indico.cern.ch/event/932973/}
+         {4th FCC Physics and Experiments Workshop}
+  \end{textblock*}
 \end{frame}
 
 
@@ -621,6 +651,12 @@ Building on and reusing CERN’s existing infrastructures\\
   \begin{center}
     \includegraphics[width=.52\linewidth]{figures/IDEA_calorimeter_flatview.png}
   \end{center}
+
+  \begin{textblock*}{\paperwidth}(4pt, 1.1\textheight)
+    \tiny source:
+    \href{https://indico.cern.ch/event/932973/}
+         {4th FCC Physics and Experiments Workshop}
+  \end{textblock*}
 \end{frame}
 
 
@@ -648,6 +684,12 @@ Building on and reusing CERN’s existing infrastructures\\
       \includegraphics[width=.8\linewidth]{figures/IDEA_calorimeter_fibers.png}
     \end{center}
   \end{columns}
+
+  \begin{textblock*}{\paperwidth}(4pt, 1.1\textheight)
+    \tiny source:
+    \href{https://indico.cern.ch/event/932973/}
+         {4th FCC Physics and Experiments Workshop}
+  \end{textblock*}
 \end{frame}
 
 
@@ -672,6 +714,12 @@ Building on and reusing CERN’s existing infrastructures\\
       \includegraphics[width=\linewidth]{figures/CEPC_crystal_calo_design2.png}
     \end{center}
   \end{columns}
+
+  \begin{textblock*}{\paperwidth}(4pt, 1.1\textheight)
+    \tiny source:
+    \href{https://indico.cern.ch/event/932973/}
+         {4th FCC Physics and Experiments Workshop}
+  \end{textblock*}
 \end{frame}
 
 
@@ -697,6 +745,12 @@ Building on and reusing CERN’s existing infrastructures\\
     \includegraphics[align=c,width=0.47\linewidth]{figures/FCC_ee_LAr_diagram.png}\\[.5em]
     FCC-hh \hspace{16em} FCC-ee
   \end{center}
+
+  \begin{textblock*}{\paperwidth}(4pt, 1.1\textheight)
+    {\tiny
+     \href{https://indico.cern.ch/event/969249/contributions/4086276/attachments/2132741/3591642/20201029_LAr_workingMeeting_Brieuc.pdf}
+          {source: Brieuc François (CERN)}}
+  \end{textblock*}
 \end{frame}
 
 
@@ -707,8 +761,6 @@ Building on and reusing CERN’s existing infrastructures\\
   \vspace{-1.5ex}
   \hspace{6.7em} 30\% + 70\% \hspace{14.5em} 60\% + 30\% + 10\%
 
-  \vspace{-1ex}
-  \bluetext{Idea:}
   \begin{columns}[c]
     \column{.5\textwidth}
     \begin{itemize}
@@ -725,7 +777,13 @@ Building on and reusing CERN’s existing infrastructures\\
     \end{itemize}
   \end{columns}
 
+  \begin{textblock*}{\paperwidth}(4pt, 1.1\textheight)
+    \tiny source:
+    \href{https://indico.cern.ch/event/932973/}
+         {4th FCC Physics and Experiments Workshop}
+  \end{textblock*}
 \end{frame}
+
 
 \begin{frame}
   \frametitle{Hardware Improvements FCC-ee I}
@@ -753,6 +811,14 @@ Building on and reusing CERN’s existing infrastructures\\
       \includegraphics[width=\linewidth]{figures/fcc-lar-feedthroughs.png}
     \end{center}
   \end{columns}
+
+  \begin{textblock*}{\paperwidth}(4pt, 1.1\textheight)
+    \tiny sources:
+    \href{https://indico.cern.ch/event/969249/contributions/4086276/attachments/2132741/3591642/20201029_LAr_workingMeeting_Brieuc.pdf}
+         {B. François (CERN)},
+    \href{https://indico.cern.ch/event/1021554/contributions/4291715/attachments/2219159/3757597/Presentation_meeting_1_April_2021.pdf}
+         {M. Barba (CERN)}
+  \end{textblock*}
 \end{frame}
 
 
@@ -762,6 +828,7 @@ Building on and reusing CERN’s existing infrastructures\\
   \begin{columns}[c]
     \column{.5\textwidth}
 
+    \vspace*{-1em}
     \bluetext{Cryostat vessel:}
     \begin{itemize}
       \item Important for low energy particle measurements (bellow 300 MeV)
@@ -783,6 +850,14 @@ Building on and reusing CERN’s existing infrastructures\\
       \includegraphics[width=0.9\linewidth]{figures/nasa-cryotank.jpg}
     \end{center}
   \end{columns}
+
+  \begin{textblock*}{\paperwidth}(4pt, 1.1\textheight)
+    \tiny sources:
+    \href{https://doi.org/10.1088/1748-0221/15/06/P06017}
+         {10.1088/1748-0221/15/06/P06017},
+    \href{https://www.nasa.gov/directorates/spacetech/game_changing_development/projects/archived/CCTD}
+         {NASA}
+  \end{textblock*}
 \end{frame}
 
 
@@ -808,6 +883,12 @@ Building on and reusing CERN’s existing infrastructures\\
       \includegraphics[width=0.7\linewidth]{figures/fcc-lar-segmentation.png}
     \end{center}
   \end{columns}
+
+  \begin{textblock*}{\paperwidth}(4pt, 1.1\textheight)
+    {\tiny
+     \href{https://indico.cern.ch/event/999820/contributions/4200638/attachments/2241010/3799623/ECFA_TF6_NobleLiquid_Brieuc_Francois.pdf}
+          {source: Brieuc François (CERN)}}
+  \end{textblock*}
 \end{frame}
 
 \begin{frame}
@@ -830,6 +911,12 @@ Building on and reusing CERN’s existing infrastructures\\
       \includegraphics[width=.7\linewidth]{figures/pandora_example.pdf}
     \end{center}
   \end{columns}
+
+  \begin{textblock*}{\paperwidth}(4pt, 1.1\textheight)
+    \tiny source:
+    \href{https://doi.org/10.1140/epjc/s10052-015-3659-3}
+         {10.1140/epjc/s10052-015-3659-3}
+  \end{textblock*}
 \end{frame}
 
 %
