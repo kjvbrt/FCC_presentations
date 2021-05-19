@@ -6,7 +6,7 @@
 \usepackage{booktabs}
 \usepackage{graphbox}
 
-\usetheme[numbering=fraction,progressbar=frametitle,sectionpage=none]{metropolis}
+\usetheme[numbering=fraction,progressbar=frametitle]{metropolis}
 
 
 % Backup
@@ -109,134 +109,137 @@
   \frametitle{Questionnaire}
 
   \begin{columns}
-     \column{.8\textwidth}
-     \only<1->{
-       \begin{itemize}
-       \item Are you a fan of new large scale experiments in HEP?
-       \item Are you interested in the progress of the FCC project?  
-       \item Would you like to join the preparatory face of the experiment? 
-       \item Are you interested in R\&D projects or hardware?
-       \item Would you like to know what Juraj and myself are working on?  
-       \end{itemize}
-     }
-     \only<2->{
-       \vspace{1ex}
-       \bluetext{If you have you have answered at least once ``YES'', you're certainly interested in the topic of this talk!}\\
-     }
-     \only<3>{
-       \vspace{1ex}
-       \bluetext{\bf If your interest still remains after the talk, do not hesitate to contact us :)}\\
-     }
-     
-     
-     \column{.2\textwidth}
-     \only<1->{
-       \begin{center}
-         \includegraphics[width=0.5\linewidth]{figures/question.png}\\
-         \vspace{2ex}
-       \end{center}
-     }
-       \only<3>{
-         \begin{center}
-           \vspace{2ex}
-         \includegraphics[width=0.8\linewidth]{figures/weWantYou.png}\\
-       \end{center}
-     }  
-  \end{columns}
+    \column{.7\textwidth}
 
+    \begin{itemize}
+      \item Are you a fan of new large scale experiments in HEP\@?
+      \item Are you interested in the progress of the FCC project?
+      \item Would you like to join the preparatory face of the experiment?
+      \item Are you interested in R\&D projects or hardware?
+      \item Would you like to know what Juraj and myself are working on?
+    \end{itemize}
+    \pause%
+
+    \column{.3\textwidth}
+
+    \begin{center}
+      \includegraphics[width=0.5\linewidth]{figures/question.png}
+    \end{center}
+  \end{columns}
+  \pause%
+
+  \vspace{1ex}
+  \bluetext{If you answered at least once ``YES'', you're certainly\\ interested
+            in the topic of this talk!}
+  \pause%
+
+  \vspace{-3ex}
+  \begin{columns}
+    \column{.7\textwidth}
+
+    \bluetext{\bf If your interest still remains after the talk, do not
+              hesitate to contact us :)}
+
+    \column{.3\textwidth}
+
+    \vspace{-3ex}
+    \begin{center}
+      \includegraphics[width=0.8\linewidth]{figures/weWantYou.png}\\
+    \end{center}
+  \end{columns}
 \end{frame}
 
 
 \begin{frame}
   \frametitle{Future Colliders}
-  \only<1->{
+
   \begin{columns}[c]
-    \column{.5\textwidth}
+    \column{.4\textwidth}
+
     \bluetext{Large Hadron Collider at CERN}
     \begin{itemize}
-    \item LHC (2008--2024): 8--13~TeV, 400~fb$^{-1}$
-    \item HL-LHL (2027--2040): 14~TeV, 4000~fb$^{-1}$
+    \item LHC (2008--2024): 8--13 TeV, 400 fb$^{-1}$
+    \item HL-LHL (2027--2040): 14 TeV, 4000 fb$^{-1}$
     \end{itemize}
 
-    \column{.5\textwidth}
+    \column{.6\textwidth}
+
     \begin{center}
-      \includegraphics[width=0.9\linewidth]{figures/HL-LHC-tt.png}\\
-     \end{center}
+      \includegraphics[width=0.75\linewidth]{figures/HL-LHC-tt.png} \\
+    \end{center}
   \end{columns}
-  }
+  \pause%
 
-  \only<2->{
   \vspace{2ex}
-  \bluetext{{\bf Next generation of colliders after LHC era?}}\\
+  \bluetext{{\bf Next generation of colliders after LHC era?}} \\
   \vspace{2ex}
-  }
+  \pause%
 
-  \only<3>{
-  \bluetext{European Strategy of Particle Physics 2020}\\
+  \bluetext{European Strategy of Particle Physics 2020} \\
   \begin{itemize}
     \item New $e^+e^-$ collider (Higgs factory) as the highest-priority
-    \item Hadron collider with $E_{\mathrm{cms}}$ at least 100 TeV at CERN as a longer term
+    \item Hadron collider with $E_{\mathrm{cms}}$ higher than 10 TeV at CERN as
+          a longer term
   \end{itemize}
-  }
-\end{frame}  
+\end{frame}
+
 
 \begin{frame}
   \frametitle{Why do we need new hadron collider?}
-  
-  \only<1->{
-    \begin{columns}[c]
+
+  \begin{columns}[c]
     \column{.6\textwidth}
-       \bluetext{{\bf Hadron collider as a discovery machine}}\\
-       \vspace{2ex}
-      \bluetext{Open questions}
-      \begin{itemize}
+
+    \bluetext{{\bf Hadron collider as a discovery machine}}\\
+    % \vspace{2ex}
+
+    \bluetext{Open questions}
+    \begin{itemize}
       \item Dark matter
       \item Matter-antimatter symmetry
       \item Neutrino masses
-      \item ...
-      \end{itemize}
-    }
-    \only<2>{
-      \bluetext{Hadron collider can give answers if}
-      \begin{itemize}
+      \item \dots
+    \end{itemize}
+    \pause%
+
+    \bluetext{Hadron collider can give answers if}
+    \begin{itemize}
       \item Mass of new particles is in its reach
       \item The detectors are sensitive enough
-      \end{itemize} 
-   
+    \end{itemize}
+
     \column{.4\textwidth}
-    \includegraphics[width=1.0\linewidth]{figures/zprime-search-fcchh.png}\\
-      \tiny{Image: \href{https://cds.cern.ch/record/2651300?ln=en}{FCC-hh CDR}}
-    }
-  \end{columns}  
-  
+
+    \includegraphics[width=\linewidth]{figures/zprime-search-fcchh.png} \\
+    \tiny{Image: \href{https://cds.cern.ch/record/2651300?ln=en}{FCC-hh CDR}}
+  \end{columns}
 \end{frame}
 
 
 \begin{frame}
   \frametitle{Why do we need new lepton collider?}
 
-  \only<1->{
-  \bluetext{{\bf Very precise measurements of the electroweak sector as a hint of new physics}}\\
-  \vspace{2ex}
-  }
-  \only<2->{
+  \bluetext{{\bf Very precise measurements of the electroweak sector as a hint
+  of new physics}} \\[2ex]
+  \pause%
+
   \bluetext{Highlights from the physics programme}
-    \begin{itemize}
-      \item Higgs boson couplings, Higgs boson width
-      \item Top quark and Higgs boson masses
-      \item Flavour physics ($b$, $c$, $\tau$)
-    \end{itemize}
-  }
-  \only<3>{ 
+  \begin{itemize}
+    \item Higgs boson couplings
+    \item Top quark and Higgs boson masses
+    \item Flavour physics ($b$, $c$, $\tau$)
+  \end{itemize}
+  \pause%
+
   \bluetext{Advantages of $e^+e^-$ colliders}
-     \begin{itemize}
-     \item Clean environment $\rightarrow$ measurements of unprecedented precision\\
-     Theoretical uncertainties can become the dominant ones
-     \item Higgs factories provide model-independent measurements
-     \item We can starting building the collider (almost) now
-     \end {itemize}
-   }
+  \begin{itemize}
+    \item Clean environment $\rightarrow$ measurements of unprecedented precision\\
+          Theoretical uncertainties can become the dominant ones
+    \item Higgs factories provides model-independent measurements
+    \item We can starting building the collider (almost) now
+  \end{itemize}
 \end{frame}
+
 
 \begin{frame}
   \frametitle{Lepton colliders at the market}
@@ -252,8 +255,8 @@
      \begin{itemize}
      \item FCC (Future Circular Collider, CERN)
      \item CEPC (Circular Electron Positron Collider, China)
-     \end {itemize}
-  
+     \end{itemize}
+
     \column{.3\textwidth}
     \includegraphics[width=0.4\linewidth]{figures/ilc_logo_400x400.jpg}\\
     \vspace*{-0.5cm}\hspace*{2cm}\includegraphics[width=0.4\linewidth]{figures/CLIC-Logo-Color-72_3_0.png}\\
@@ -262,19 +265,18 @@
    \end{columns}
 \end{frame}
 
+
 \begin{frame}
   \frametitle{Circular vs linear colliders}
 
-  \only<1->{
   \begin{center}
     \includegraphics[width=0.4\linewidth]{figures/Luminosity_vs_energy_v1.png}\\
      \tiny{Image: \href{https://cds.cern.ch/record/2651299?ln=en}{FCC-ee CDR}}
   \end{center}
-   \vspace{1ex}
-  }
+  \vspace{1ex}
+  \pause%
 
   \begin{columns}
-     \only<2->{
      \column{.4\textwidth}
      \bluetext{Linear colliders}
      \begin{itemize}
@@ -282,8 +284,8 @@
      \item No synchrotron radiation
      \item Beams not reusable
      \end{itemize}
-     }
-     \only<3>{
+     \pause%
+
      \column{.5\textwidth} 
      \bluetext{Circular colliders}
      \begin{itemize}
@@ -292,38 +294,38 @@
      \item Circulating beams
      \item Synergy with future $pp$ collider
      \end{itemize}
-     }
    \end{columns}
 \end{frame}
 
+
 \begin{frame}
   \frametitle{Higgs factories: Higgs coupling}
-  \only<1->{
-  \begin{center}  
+  \begin{center}
     \includegraphics[width=0.85\linewidth]{figures/kappa.png}\\
     \tiny{Image: \href{https://arxiv.org/abs/1905.03764}{arXiv:1905.03764}}
   \end{center}
-  }
-  \only<2>{
+  \pause%
+
   %\small{
   Factor 2--10 improvement with $e^+e^-$ colliders wrt HL-LHC\\
   Comparable sensitivities in initial stages of $e^+e^-$ colliders (factor of 2 max)
   %}
-  }
 \end{frame}
+
 
 \begin{frame}
   \frametitle{Higgs factories: Higgs self-coupling}
-  \only<1->{
+
   \begin{center}
     \includegraphics[width=0.6\linewidth]{figures/higgs_selfCoupling.png}\\
     \tiny{Image: \href{https://arxiv.org/abs/1905.03764}{arXiv:1905.03764}}
   \end{center}
-  }
-  \only<2>{
-  A Higgs factory is needed (BR untagged w/o assumptions!), even if the ultimate goal is the hadron-hadron collider.\\
-  }
+  \pause
+
+  A Higgs factory is needed (BR untagged w/o assumptions!), even if the ultimate
+  goal is the hadron-hadron collider.\\
 \end{frame}
+
 
 \begin{frame}
   \frametitle{Possible timelines}
@@ -341,14 +343,14 @@
   \frametitle{Future Circular Collider}
   \includegraphics[width=1.0\linewidth]{figures/FCC_landscape.jpg}\\
 \end{frame}
-  
+
 \begin{frame}
   \frametitle{FCC}
 
   \begin{center}
      \includegraphics[width=0.6\linewidth]{figures/CERN-FCC.jpg}\\
   \end{center}
-  
+
   \bluetext{{\bf Stage 1:} FCC-ee as Higgs factory, electroweak and top factory at highest luminosities}\\
   \bluetext{{\bf Stage 2:} FCC-hh (100 TeV) as a natural continuation, with ion and $eh$ option}\\
 Complementary physics, common civil engineering and technical infrastructres\\
@@ -364,7 +366,7 @@ Building on and reusing CERN’s existing infrastructures\\
      Double ring $e^+e^-$ collider (100 km)\\
      Asymmetric IR layout \& optics to limit synchrotron radiation\\
      \column{.5\textwidth}
-     
+
      \begin{center}
        {\footnotesize\hspace{3.3em}88--95
                   \hspace{0.2em}\textcolor{blue}{158--162}
@@ -379,58 +381,63 @@ Building on and reusing CERN’s existing infrastructures\\
 
 \begin{frame}
     \frametitle{FCC-ee: Parameters}
-    \includegraphics[width=1.0\linewidth]{figures/parameters-fccee.png}\\
+    \includegraphics[width=1.0\linewidth]{figures/parameters-fccee.png}
 \end{frame}
 
+
 \begin{frame}
-    \frametitle{FCC-ee: Key technologies}
-   \begin{columns}[c]
-   \only<1->{
-   \column{.5\textwidth}
-   \begin{center}
-       \includegraphics[width=0.6\linewidth]{figures/vacuumArc.png}\\
-   \end{center}  
-     FCC-ee complete vacuum arc half-cell mock up\\
-     \small{
-     including girder, vacuum system with antechamber + pumps,
-     dipole, quadrupole + sext. magnets, BPMs, cooling + alignment
-     systems, technical infrastructure interfaces}
-   }
-   \only<2>{
-   \column{.5\textwidth}
-     \begin{center}
-         \includegraphics[width=0.35\linewidth]{figures/srfCavities.png}\\
-     \end{center}
-     400 MHz SRF cryomodule\\
-     Prototype multi-cell cavities for FCC $ZH$ operation\\
-     High-efficiency RF power sources\\
-    }
- \end{columns}   
-    
+  \frametitle{FCC-ee: Key technologies}
+  \begin{columns}[c]
+    \column{.5\textwidth}
+
+    \begin{center}
+      \includegraphics[width=0.6\linewidth]{figures/vacuumArc.png}\\
+    \end{center}
+
+    FCC-ee complete vacuum arc half-cell mock up\\[1ex]
+    \small{%
+    including girder, vacuum system with antechamber + pumps,
+    dipole, quadrupole + sext.\ magnets, BPMs, cooling + alignment
+    systems, technical infrastructure interfaces}
+    \pause%
+
+    \column{.5\textwidth}
+
+    \begin{center}
+      \includegraphics[width=0.35\linewidth]{figures/srfCavities.png}\\
+    \end{center}
+
+    \begin{itemize}
+      \item 400 MHz SRF cryomodule
+      \item Prototype multi-cell cavities for FCC $ZH$ operation
+      \item High-efficiency RF power sources
+    \end{itemize}
+  \end{columns}
 \end{frame}
+
 
 \begin{frame}
   \frametitle{FCC-hh: Hadron collider}
    \begin{columns}[c]
     \column{.4\textwidth}
      \includegraphics[width=1.0\linewidth]{figures/FCC_hh_ring.pdf}\\
-     
+
      \column{.6\textwidth}
       \bluetext{Order of magnitude increase wrt HL-LHC}
       \begin{itemize}
       \item Centre of mass energy: 14 TeV $\rightarrow$ 100 TeV
       \item Total integrated luminosity: 4 ab$^{-1} \rightarrow$ 20 ab$^{-1}$
       \end{itemize}
-      
+
       \bluetext{Key technology: 16 T dipole magnets}
       %\vspace{1ex}
       \begin{center}
         \includegraphics[width=.45\linewidth]{figures/fermilab-magnets-newdipole-small.jpg}\\
          {\small{Fermilab: Prototype of 14.1 T Nb$_3$Sn dipole magnet}}
-       \end{center}     
+       \end{center}
    \end{columns}
-
 \end{frame}
+
 
 \begin{frame}
   \frametitle{FCC-hh: parameters}
@@ -487,7 +494,7 @@ Building on and reusing CERN’s existing infrastructures\\
 %
 % -----------------------------------------------------------------------------
 %
-\section{Noble Liquid Calorimetry for FCC-ee}
+\section{Calorimetry for FCC-ee}
 
 \begin{frame}
   \frametitle{FCC-ee Calorimetry}
@@ -556,11 +563,6 @@ Building on and reusing CERN’s existing infrastructures\\
   \end{columns}
 \end{frame}
 
-
-%
-% -----------------------------------------------------------------------------
-%
-\section{Other Calorimeter Types}
 
 \begin{frame}
   \frametitle{CALICE}
@@ -836,15 +838,28 @@ Building on and reusing CERN’s existing infrastructures\\
 \begin{frame}
   \frametitle{Conclusion and Plans}
 
+  \bluetext{Future Circular Collider}
   \begin{itemize}
-    \item LAr calorimeters were investigated mostly for FCC-hh
-    \item Investigate LAr performance in the FCC-ee framework
-          \begin{itemize}
-            \item Replace existing CLD/IDEA calorimeters with LAr
-          \end{itemize}
-    \item Implement particle flow algorithm for LAr calorimeter
-    \item Multiple R\&D projects directed at LAr at FCC-ee
+    \item FCC Integrated program is an ambitious CERN project
+    \item Feasibility to be proved by the next European HEP Strategy
   \end{itemize}
+
+  \bluetext{Noble Liquid Calorimeters}
+  \begin{itemize}
+    \item Noble Liquid calorimeter in reference FCC-hh detector, option in
+          FCC-ee
+    \item Multiple R\&D projects directed at noble liquid  calorimetry at FCC-ee
+  \end{itemize}
+
+  \bluetext{Our involvement}
+  \begin{itemize}
+    \item Performance optimization in the FCC-ee framework
+    \item Implement particle flow algorithm for LAr calorimeter
+  \end{itemize}
+
+  \begin{center}
+    \bluetext{\bf New souls are welcome!}
+  \end{center}
 \end{frame}
 
 %
