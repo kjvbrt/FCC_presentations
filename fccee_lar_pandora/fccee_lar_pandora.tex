@@ -58,16 +58,19 @@
 \newcommand{\redtext}[1]{%
   \textcolor{myRed}{#1}
 }
+\newcommand{\vtype}[1]{%
+  \textcolor{myBlue}{\texttt{#1}}
+}
 
 
 % Title
 \title{PandoraPFA for FCC-ee LAr Calorimeter}
 \author{Juraj~Smie\v{s}ko\inst{1,2}}
 \institute{\inst{1} Charles University, Czechia \\
-           \inst{2} Slovak Academy of Sciences, Slovakia}
+           \inst{1} CERN}
 \date{\footnotesize
-      Noble Liquid Calorimetry for Future Accelerator Experiments \\
-      03 March 2022}
+      Workshop on GranuLAr noble liquid detectors \\
+      08 Apr 2022}
 
 %
 % -----------------------------------------------------------------------------
@@ -213,8 +216,6 @@
       \item Marlin processor is steered by python script instead of xml file
     \end{itemize}
   \end{columns}
-
-
 \end{frame}
 
 
@@ -222,8 +223,9 @@
   \frametitle{The Plan for Running Pandora}
 
   \begin{center}
-  \bluetext{\bf Run Pandora inside \texttt{DDMarlinPandora} inside
-            \texttt{k4MarlinWrapper}}
+    \texttt{\bluetext{k4MarlinWrapper}}
+    $\leftrightarrow$ \texttt{\bluetext{DDMarlinPandora}}
+    $\leftrightarrow$ \bluetext{\bf Pandora}
   \end{center}
 
   \begin{columns}[c]
@@ -258,6 +260,101 @@ ApplicationMgr().TopAlg += [pandora]
 
 
 \begin{frame}
+  \frametitle{EDM Conversions: CaloHits I}
+
+  \resizebox{\textwidth}{!} {
+    \begin{tabular}{lll}
+      \bluetext{\bf Pandora} & \bluetext{\bf LCIO | CalorimeterHitImpl}
+                             & \bluetext{\bf EDM4hep | ReconstructedParticle} \\
+      \vtype{CartesianVector} m\_positionVector
+        & \vtype{float} \_position[3]
+        & \vtype{edm4hep::Vector3f} position \\
+      \vtype{float} m\_x0 & \\
+      \vtype{const CartesianVector} m\_expectedDirection & \\
+      \vtype{const CartesianVector} m\_cellNormalVector; & \\
+      \vtype{const CellGeometry} m\_cellGeometry \\
+      \vtype{const float} m\_cellSize0 & \vtype{int} \_cellID0
+                                       & \vtype{uint64\_t} cellID \\
+      \vtype{const float} m\_cellSize1 & \vtype{int} \_cellID1 \\
+      \vtype{const float} m\_cellThickness \\
+      \vtype{const float} m\_nCellRadiationLengths \\
+      \vtype{const float} m\_nCellInteractionLengths; \\
+      \vtype{const float} m\_time & \vtype{float} \_time
+                                  & vtype{float} time \\
+      \vtype{const float} m\_inputEnergy & \vtype{float} \_energy
+                                         & \vtype{float} energy \\
+      \vtype{const float} m\_mipEquivalentEnergy \\
+      \vtype{const float} m\_electromagneticEnergy \\
+      \vtype{const float} m\_hadronicEnergy \\
+      \vtype{const bool} m\_isDigital \\
+    \end{tabular}
+  }
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{EDM Conversions: CaloHits II}
+
+  \resizebox{\textwidth}{!} {
+    \begin{tabular}{lll}
+      \bluetext{\bf Pandora} & \bluetext{\bf LCIO | CalorimeterHitImpl}
+                             & \bluetext{\bf EDM4hep | ReconstructedParticle} \\
+      \vtype{const HitType} m\_hitType & \vtype{int} \_type
+                                       & \vtype{int32\_t} type \\
+      \vtype{const HitRegion} m\_hitRegion \\
+      \vtype{const unsigned int} m\_layer \\
+      \vtype{InputUInt m\_pseudoLayer} \\
+      \vtype{const bool} m\_isInOuterSamplingLayer \\
+      \vtype{float} m\_cellLengthScale \\
+      \vtype{bool} m\_isPossibleMip \\
+      \vtype{bool} m\_isIsolated \\
+      \vtype{bool} m\_isAvailable \\
+      \vtype{float} m\_weight \\
+      \vtype{MCParticleWeightMap}  m\_mcParticleWeightMap \\
+      \vtype{const void} *m\_pParentAddress \\
+    \end{tabular}
+  }
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{EDM Conversions: PFOs $\leftrightarrow$ EDM4hep}
+
+  \resizebox{\textwidth}{!} {
+    \begin{tabular}{lll}
+      \bluetext{\bf EDM4hep | ReconstructedParticle}
+        & \bluetext{\bf LCIO | ReconstructedParticleImpl}
+        & \bluetext{\bf Pandora | ParticleFlowObject} \\
+      \vtype{int32\_t} type & \vtype{int} \_type & \vtype{int} m\_particleId \\
+      \vtype{float} energy & \vtype{double} \_energy & \vtype{float} m\_energy \\
+      \vtype{edm4hep::Vector3f} momentum & \vtype{double} \_momentum[3] & \vtype{CartesianVector} m\_momentum \\
+      \vtype{edm4hep::Vector3f} referencePoint & \vtype{float} \_reference[3] & \\
+      \vtype{float} charge & \vtype{float} \_charge & \vtype{int} m\_charge \\
+      \vtype{float} mass & \vtype{double} \_mass & \vtype{float} m\_mass \\
+      \vtype{float} goodnessOfPID & \vtype{float} \_goodnessOfPID & \\
+      \vtype{std::array<float,10>} covMatrix & \vtype{EVENT::FloatVec} \_cov & \\
+      %OneToOneRelations: & & \\
+      \vtype{edm4hep::Vertex} startVertex & \vtype{EVENT::Vertex*} \_sv & \vtype{VertexList} m\_vertexList \\
+      \vtype{edm4hep::ParticleID} particleIDUsed & \vtype{EVENT::ParticleID*} \_pidUsed & \\
+      %OneToManyRelations: & & \\
+      \vtype{edm4hep::Cluster} clusters & \vtype{EVENT::ClusterVec} \_clusters & \vtype{ClusterList} m\_clusterList \\
+      \vtype{edm4hep::Track} tracks & \vtype{EVENT::TrackVec} \_tracks & \vtype{TrackList} m\_trackList \\
+      \vtype{edm4hep::ReconstructedParticle} particles &
+      \vtype{EVENT::ReconstructedParticleVec} \_particles & \\
+      \vtype{edm4hep::ParticleID} particleIDs & \vtype{EVENT::ParticleIDVec} \_pid & \\
+      & & \vtype{PfoList} m\_parentPfoList \\
+      & & \vtype{PfoList} m\_daughterPfoList \\
+      & & \vtype{PropertiesMap} m\_propertiesMap \\
+%     MutableExtraCode:
+%       declaration: "
+%       bool isCompound()
+% 
+    \end{tabular}
+  }
+\end{frame}
+
+
+\begin{frame}
   \frametitle{What is Missing?}
 
   \scriptsize
@@ -268,7 +365,8 @@ ApplicationMgr().TopAlg += [pandora]
   \begin{itemize}\scriptsize
     \item \bluetext{Geometry description in DD4HEP format}
           \begin{itemize}\scriptsize
-            \item IDEA-LAr already described in it, needs adjustments
+            \item IDEA-LAr already described in it, needs code to build
+                  instance in memory
           \end{itemize}
    \item \bluetext{Calorimeter hits}
           \begin{itemize}\scriptsize
@@ -284,7 +382,6 @@ ApplicationMgr().TopAlg += [pandora]
     \item \redtext{Tracks alongside with vertexes}
           \begin{itemize}\scriptsize
             \item Requires custom code, base class provided
-            % \item 
           \end{itemize}
     \item \bluetext{MCParticles}
           \begin{itemize}\scriptsize
@@ -305,9 +402,35 @@ ApplicationMgr().TopAlg += [pandora]
           \end{itemize}
       \item Calibration of the calorimeter clusters
       \item Review of CLIC and ILD specific code
-      \item Optimization of the algorithms
+      \item Optimization of the algorithms / Setting correct parameters
   \end{itemize}
 \end{frame}
+
+
+\begin{frame}
+  \frametitle{Conclusions}
+
+  \begin{columns}[c]
+    \column{.5\textwidth}
+
+    \begin{itemize}
+      \item Basic blocks are in place
+      \item Let's start with just clustering to verify running of the whole chain
+      \item ``Settings{}'' are the real challenge
+            \begin{itemize}
+              \item Detector parameters
+              \item Calibrations
+            \end{itemize}
+    \end{itemize}
+
+    \column{.5\textwidth}
+
+    \begin{center}
+      \includegraphics[width=.8\textwidth]{figures/pandora_edm_cut.png}
+    \end{center}
+  \end{columns}
+\end{frame}
+
 
 
 %
